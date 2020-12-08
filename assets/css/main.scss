@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import "_var","_mixin","_function";
+
+.tit{font-size: 35px;text-align: center;padding: 45px 0 30px;}
+.tit+p{font-family: NtSansKR;font-size: 18px;font-weight: 500;text-align: center;}
+#cnt1{
+    .swiper-container{width: 100%;height: 100vh;
+        .swiper-wrapper{
+            .swiper-slide{
+                img{position: absolute;top: 0;right: 0;width:1320px;height: 1048px;}
+                .txt{
+                    position: absolute;top: 441px;left: 255px;
+                    p{font-size: 30px;}
+                    strong,span{display:inline-block;}
+                }
+            }
+            .slide1{
+                .txt{
+                    strong{font-size: 50px;margin-bottom: 44px;}
+                    p{color: $dark_gray;}
+                }
+            }
+            .slide2{
+                p:nth-child(1){font-size: 50px;margin-bottom: 44px;}
+                p:nth-child(2),p:nth-child(3){color: $dark_gray;}
+                p:nth-child(3){margin-top: 50px;}
+            }
+            .slide3{
+                p:nth-child(2){
+                    margin-top: 50px;
+                    span{font-size: 50px;}
+                }
+            }
+        }
+    }
+    .controller{border: 1px solid red;
+        position: absolute;bottom: 159px;left: 255px;z-index: 500;
+        &::before{
+            @include radius(18px);
+            @include transY-50;
+            content: "";position: absolute;top: 50%;right: 35px;width: 100px;height: 36px;background: #a6a6a6;
+        }
+        .swiper-pagination,.swiper-button-prev,.swiper-button-next{position: static;}
+        .swiper-pagination,.swiper-button-prev,.swiper-button-next,.play_stop{float: left;}
+        .swiper-pagination{
+            display:inline-block;font-size: 30px;text-align: left;margin: 10px 0 0 20px;width: auto;
+            .swiper-pagination-current{font-size: 50px;color: $red;}
+        }
+        .swiper-button-prev,.swiper-button-next,.play_stop{
+            @include bgsize(cover);
+            background: no-repeat center;width: 70px;height: 70px;margin-top: 0;
+        }
+        .swiper-button-prev{
+            background-image: url("../images/icon/prev.svg");
+            &.on,&:focus{background-image: url("../images/icon/prev_on.svg");}
+            &::after{content: "";}            
+        }
+        .swiper-button-next{
+            background-image: url("../images/icon/next.svg");margin-left: 20px;
+            &.on,&:focus{background-image: url("../images/icon/next_on.svg");}
+            &::after{content: "";}            
+        }
+        .play{
+             display: none;position: relative;background-image: url("../images/icon/play_on.svg");margin-left: 57px;
+        }
+        .stop{background-image: url("../images/icon/stop_on.svg");margin-left: 30px;}
+    }
+}
+#cnt2{
+    .swiper-container{
+        margin-top: 160px;
+        .swiper-wrapper{
+            .swiper-slide{
+                width: 591px;
+                .img_wrap{
+                    width: 374px;height: 576px;
+                    img{background: no-repeat center;width: 374px;height: 567px;}
+                }
+            }
+        }
+    }
+    .txt{
+        @include radius(15px);
+        @include shadow(6px 6px 15px rgba(0,0,47,0.3));
+        @include transY-50;
+        position: absolute;right: 0;top: 50%;background: #ffffff;border: 1px solid #777;width: 335px;height: 230px;text-align: center;line-height: 25px;
+        strong{display: block;margin: 28px 0;font-size: 25px;}
+        ul{
+            li{
+                position: relative;text-align: left;padding-left: 102px;
+                &::before{
+                    @include radius(2px);
+                    @include transY-50;
+                    content:"";position: absolute;left: 87px;top: 50%;background: #222;width: 8px;height: 2.5px;
+                }
+            }    
+        }
+        button{display: inline-block;width: 85px;height: 31px;font-size: 13px;margin-top: 30px;}
+    }
+    .controller{
+        @include bgsize(cover);
+        .swiper-button-prev,.swiper-button-next{background: no-repeat center;width: 70px;height: 70px;}
+        .swiper-button-prev{background-image: url("../images/icon/prev.svg");left: 0;}
+        .swiper-button-next{background-image: url("../images/icon/next.svg");right: 14px;}
+    }
+}

@@ -1,0 +1,4 @@
+@function vw412($px){
+    $vwSize:$px*100/412;
+    @return #{$vwSize}vw;
+}
