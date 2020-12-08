@@ -39,42 +39,44 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 }
 
 .header{
-    >div{border: 1px solid red;}
     position: fixed;top: 0;left: 0;width: 100%;height: 80px;z-index: 900;background: #ffffff;
     &::after{
         content: "";position: absolute;width: 100%;height: 15px;top: 80px;left: 0;background: url("../images/common/bg_header.svg") repeat-x left bottom;
     }
     .logo{
-        float: left;margin-left: 14px;padding-top: 34px;
+        float: left;margin-left: 255px;padding-top: 34px;
         img{
             @include bgsize(cover);
             display: block;width: 236px;height: 26px;
         }
     }
-    .teacher{position: absolute;top: 17px;right: 14px;width: 179px;height: 50px;font-size: 20px;}
+    .teacher{position: absolute;top: 17px;right: 254px;width: 179px;height: 50px;font-size: 20px;}
     .inquiry{
-        position: fixed;bottom: 18px;right: 290px;width: 80px;height: 80px;background: url("../images/common/circle_gradient_btn.svg") no-repeat;
-        span{display: inline-block;width: 45px;height: 49px;font-size: 22px;color: #ffffff;}
+        position: fixed;bottom: 70px;right: 290px;width: 80px;height: 80px;background: url("../images/common/circle_gradient_btn.svg") no-repeat;color: #ffffff;font-size: 22px;
     }
 }
-#pcGnb{display:none;
-    position: relative;text-align: center;height: 80px;
-    >ul>li{
-        display: inline-block;
-        &+li{margin-left: 88px;}
-        a{display:block;}
-        >a{font-size: 18px;border-bottom: 2px solid transparent;height: 26px;line-height: 26px;}
-        &:hover>a,>a:focus,&.on>a{border-bottom-color: $red;}
+#pcGnb{
+    height: 80px;text-align: center;
+    ul{margin: 0 auto;}
+    >ul{
+        width: 700px;/* 692 */margin-top: 38px;
+        >li{
+            display: inline-block;
+            &+li{margin-left: 88px;}
+            a{display:block;}
+            >a{font-size: 18px;border-bottom: 2px solid transparent;padding-bottom: 8px;background: pink;}
+            &:hover>a,>a:focus,&.on>a{border-bottom-color: $red;}
+        }
     }
-    >.dep2{
+    .dep2{
         position: absolute;top: 80px;left: 0;background: $orange;width: 100%;height: 75px;
         >li{
-            float: left;
+            /* float: left; */margin-top: 35px;display: inline-block;position: relative;
             &+li{margin-left: 95px;}
             >a{color: #ffffff;}
         }
     }
-    >.dep3{
+    .dep3{
         position: absolute;width: 100%;height: 523px;left: 0;top: 75px;background: $gray;
         >li {
             text-align: left;
