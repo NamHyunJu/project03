@@ -37,7 +37,7 @@ $(document).ready(function(){
     //본문2 swiper
     var swiper2 = new Swiper('#cnt2 .swiper-container', {
       slidesPerView: 2,
-      spaceBetween: 38,
+      /* spaceBetween: 38, */
       slidesPerGroup: 2,
       navigation: {
         nextEl: '.swiper-button-next',

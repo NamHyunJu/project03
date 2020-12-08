@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-661.2207" y1="885.457" x2="-731.9781" y2="956.2144" gradientTransform="matrix(-1 0 0 1 -646.5996 -870.8398)">
+	 viewBox="0 0 70 70" style="enable-background:new 0 0 70 70;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-630.8347" y1="-811.0717" x2="-680.3648" y2="-860.6019" gradientTransform="matrix(-1 0 0 -1 -620.5996 -800.8398)">
 	<stop  offset="0" style="stop-color:#FF7800"/>
 	<stop  offset="1" style="stop-color:#E60417"/>
 </linearGradient>
-<path fill="url(#SVGID_1_)" d="M50,100c27.658,0,50-22.316,50-50c0-27.682-22.318-50-50-50C22.318,0,0,22.318,0,50
-	C0,77.684,22.344,100,50,100z"/>
-<path fill="#FFFFFF" d="M25.717,51.453l15.917,15.918c0.958,0.956,2.411,0.956,3.387,0c0.956-0.957,0.956-2.41,0-3.386L33.39,52.353
-	h39.258C73.947,52.353,75,51.3,75,50c0-1.299-1.053-2.353-2.353-2.353H33.39l11.632-11.632c0.956-0.957,0.956-2.411,0-3.387
-	c-0.479-0.478-0.957-0.716-1.694-0.716c-0.478,0-1.215,0.239-1.932,0.478L25.717,48.068C25.239,48.546,25,49.024,25,49.76
-	C25,50.479,25.239,50.976,25.717,51.453z"/>
+<path class="st0" d="M35,70c19.4,0,35-15.6,35-35C70,15.6,54.4,0,35,0S0,15.6,0,35C0,54.4,15.6,70,35,70z"/>
+<path class="st1" d="M18,36l11.1,11.1c0.7,0.7,1.7,0.7,2.4,0c0.7-0.7,0.7-1.7,0-2.4l-8.1-8.1h27.5c0.9,0,1.6-0.7,1.6-1.6
+	c0-0.9-0.7-1.6-1.6-1.6H23.4l8.1-8.1c0.7-0.7,0.7-1.7,0-2.4c-0.3-0.3-0.7-0.5-1.2-0.5c-0.3,0-0.9,0.2-1.4,0.3l-11,11
+	c-0.3,0.3-0.5,0.7-0.5,1.2C17.5,35.3,17.7,35.7,18,36z"/>
 </svg>

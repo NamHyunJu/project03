@@ -26,6 +26,7 @@ img {
   border: none; }
 
 address {
+  display: inline-block;
   font-style: none; }
 
 input, button {
@@ -100,9 +101,9 @@ body {
   font-weight: 400;
   color: #222222;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.25;
   word-break: keep-all;
-  letter-spacing: 30; }
+  letter-spacing: 0.03; }
 
 #skip a {
   position: absolute;
@@ -165,7 +166,8 @@ body {
 
 #pcGnb {
   height: 80px;
-  text-align: center; }
+  text-align: center;
+  display: none; }
   #pcGnb ul {
     margin: 0 auto; }
   #pcGnb > ul {
