@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title> 재능교육 </title>
+    <link rel="apple-touch-icon" href="assets/images/icon/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/fullpage.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/fullpage.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
@@ -235,7 +238,7 @@
                             <p><span>'스스로학습법' </span>으로 실현합니다.</p>
                         </div>
                     </div>
-                    </div>
+                </div>
                     <div class="controller clearfix p_r">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-pagination"></div>
@@ -510,24 +513,22 @@
                             </div>
                         </div>
                         <div class="foot_btm">
-                            <div class="foot_info">
+                            <div class="foot_left">
                                 <p class="first">
                                     <span>대표자: 박종우</span>
-                                    <address>주소: 서울특별시 종로구 창경궁로 293(주)재능교육</address>
                                     <span class="privacy">개인정보처리방침</span>
                                     <span>사업자번호: 204-81-03990</span>
                                 </p>
-                                <p class="mid">
-                                    <address>
-                                        <span>전화: 1588-1132</span>
-                                        <span>이메일: answer@jei.com</span>
-                                    </address>
-                                </p>
+                                <address class="mid">
+                                    <span>주소: 서울특별시 종로구 창경궁로 293(주)재능교육</span>
+                                    <span>전화: 1588-1132</span>
+                                    <span>이메일: answer@jei.com</span>
+                                </address>
                                 <p class="copy">Copyright © JEI corporation. All rights reserved.</p>
                             </div>
-                            <div class="right">
+                            <div class="foot_right">
                                 <div class="select_box family">
-                                    <button class="f_select round opaque" type="button">FAMILY SITE</button>
+                                    <button class="f_select round opaque more" type="button">FAMILY SITE</button>
                                     <ul class="clearfix">
                                         <li>교육ㆍ출판
                                             <ul>
@@ -570,7 +571,7 @@
                                             </ul>
                                         </li>
                                         <li>글로벌
-                                            <ul>
+                                            <ul class="global">
                                                 <li><a href="http://us.jei.com" target="_blank">미주지사</a></li>
                                                 <li><a href="http://www.jeichina.com" target="_blank">중국지사</a></li>
                                                 <li><a href="http://hk.jei.com" target="_blank">홍콩지사</a></li>
@@ -579,7 +580,7 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                    <button class="go round opaque" type="button">이동</button>
+                                    <button class="go round opaque more" type="button">이동</button>
                                 </div>
                                 <ul class="sns clearfix">
                                     <li><a href=""><img src="assets/images/icon/sns_instagram.svg" alt="인스타그램"></a></li>
@@ -598,18 +599,20 @@
     <div id="modalCnt" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="inquiryTit">
         <h3 id="inquiryTit">무료 상담 신청</h3>
         <form action="" method="" id="apply">
-            <label for="name">자녀 이름</label>
+            <label for="name" class="sub_tit">자녀 이름</label>
             <input type="text" id="name" class="first" name="name">
             <br>
-            <p class="sub_tit">연령</p>
-            <input type="radio" name="age" id="child"><label for="child">유아</label>
-            <input type="radio" name="age" id="lower"><label for="lower">초저(1~3학년)</label>
-            <input type="radio" name="age" id="senior"><label for="senior">초고(4~6학년)</label>
-            <input type="radio" name="age" id="middle"><label for="middle">중고등</label>
-            <input type="radio" name="age" id="adult"><label for="adult">성인</label>
+            <div class="age">
+                <span class="sub_tit">연령</span>
+                <input type="radio" name="age" id="child"><label for="child">유아</label>
+                <input type="radio" name="age" id="lower"><label for="lower">초저(1~3학년)</label>
+                <input type="radio" name="age" id="senior"><label for="senior">초고(4~6학년)</label>
+                <input type="radio" name="age" id="middle"><label for="middle">중고등</label>
+                <input type="radio" name="age" id="adult"><label for="adult">성인</label>
+            </div>
             <br>
-            <label for="">전화번호</label>
-            <select id="firstNum" name="firstNum" title="휴대폰 국번선택">
+            <label for="firstNum" class="sub_tit">전화번호</label>
+            <select id="firstNum" class="ntsans" name="firstNum" title="휴대폰 국번선택">
                 <option value="010" selected>010</option>
                 <option value="011">011</option>
                 <option value="017">017</option>
@@ -618,31 +621,38 @@
             <input type="text" name="midNum" id="midNum" title="핸드폰의 중간번호">
             <input type="text" name="lastNum" id="lastNum" title="핸드폰의 마지막번호">
             <br>
-            <p class="sub_tit">학습형태</p>
-            <input type="radio" name="where" id="home"><label for="home">집에서</label>
-            <input type="radio" name="where" id="center"><label for="center">센터에서</label>
+            <div class="where">
+                <span class="sub_tit">학습형태</span>
+                <input type="radio" name="where" id="home"><label for="home">집에서</label>
+                <input type="radio" name="where" id="center"><label for="center">센터에서</label>
+            </div>
             <br>
-            <label for="content">상담내용</label><textarea name="content" id="content" cols="60" rows="5"></textarea><br>
+            <div class="content">
+                <label for="content" class="sub_tit talk">상담내용</label><textarea name="content" id="content" cols="60" rows="5"></textarea>
+            </div><br>
             <p class="sub_tit">개인정보의 수집 및 이용 동의</p>
-            <p>당사는 귀하의 개인정보보호를 매우 중요시하며,『개인정보보호법』상의 개인정보보호 규정을 준수하고 있습니다.<br>
-
-                1. 개인정보의 수집•이용 목적
-                - 홈페이지 내 무료상담신청 메뉴를 통한 수집
-                - 맞춤식 종합 교육서비스의 제공
-                2. 수집•이용하는 개인정보 항목
-                - 필수항목 : 이름(자녀이름), 연령, 전화번호
-                - 선택항목 : 주소, 상담내용
-                3. 개인정보의 보유 및 이용기간
-                회사는 고객이 개인정보의 수집 및 이용에 대한 동의를 철회하는 때까지 고객이 제공한 모든 개인 정보를 보유 및 이용하게 되며 고객이 이용동의를 철회하는 경우에는 고객의 개인 정보를 재생 불가능한 방법으로 지체 없이 저장 장치에서 삭제하여 어떠한 방법으로도 열람 또는 이용할 수 없도록 만듭니다.
-                다만, 관계법령에서 일정한 보관기간을 정한 경우는 예외로 합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.
-                
-                - 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
-                - 방문에 관한 기록 : 3개월
-            </p>
-            <input type="checkbox" name="agree" id="agree"><label for="agree">개인정보수집 및 이용에 동의합니다.</label>
+            <div class="copyTxt">
+                <p class="ntsans">당사는 귀하의 개인정보보호를 매우 중요시하며,『개인정보보호법』상의 개인정보보호 규정을 준수하고 있습니다.<br>
+    
+    
+                    1. 개인정보의 수집•이용 목적
+                    - 홈페이지 내 무료상담신청 메뉴를 통한 수집
+                    - 맞춤식 종합 교육서비스의 제공
+                    2. 수집•이용하는 개인정보 항목
+                    - 필수항목 : 이름(자녀이름), 연령, 전화번호
+                    - 선택항목 : 주소, 상담내용
+                    3. 개인정보의 보유 및 이용기간
+                    회사는 고객이 개인정보의 수집 및 이용에 대한 동의를 철회하는 때까지 고객이 제공한 모든 개인 정보를 보유 및 이용하게 되며 고객이 이용동의를 철회하는 경우에는 고객의 개인 정보를 재생 불가능한 방법으로 지체 없이 저장 장치에서 삭제하여 어떠한 방법으로도 열람 또는 이용할 수 없도록 만듭니다.
+                    다만, 관계법령에서 일정한 보관기간을 정한 경우는 예외로 합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.
+                    
+                    - 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+                    - 방문에 관한 기록 : 3개월
+                </p>
+            </div>
+            <input type="checkbox" name="agree" id="agree"><label for="agree" class="agree_txt ntsans">개인정보수집 및 이용에 동의합니다.</label>
         </form>
-        <button type="submit">신청하기</button>
-        <button type="button" class="last" title="취소하기"><img src="assets/images/icon/close_btn.svg" alt="취소하기"></button>
+        <button type="submit" class="more round gradient">신청하기</button>
+        <button type="button" class="last cancle" title="취소하기"><img src="assets/images/icon/close_btn.svg" alt="취소하기"></button>
     </div>
 </body>
 </html>

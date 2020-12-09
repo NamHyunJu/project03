@@ -23,7 +23,7 @@ address {
   display: inline-block;
   font-style: normal; }
 
-input, button {
+input, select, option, label, button {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -36,6 +36,12 @@ button {
 
 input[type="submit"] {
   cursor: pointer; }
+
+input[type="text"], input[type="password"], input[type="checkbox"] {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #707070;
+  background: #ffffff no-repeat center; }
 
 form {
   border: none; }
@@ -89,6 +95,10 @@ header, nav, section, footer {
   .more.white {
     background: #ffffff;
     color: #E60417; }
+  .more.opaque {
+    border: solid 1px #ffffff;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff; }
 
 .gray {
   background-color: #F3F3F3; }
@@ -101,6 +111,51 @@ body {
   line-height: 1.25;
   word-break: keep-all;
   letter-spacing: 0.03; }
+
+#fp-nav.fp-right {
+  right: 86px; }
+
+#fp-nav ul li a span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 14px;
+  width: 14px;
+  margin: 0;
+  border: 2px solid #E60417;
+  background: transparent; }
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a span, #fp-nav ul li:hover a.active span {
+  -webkit-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  -moz-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  -o-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  height: 14px;
+  width: 14px;
+  margin: 0;
+  border: none; }
+
+#fp-nav ul li .fp-tooltip {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 0;
+  font-family: jalnan,NtSansKR,serif;
+  padding: 0 8px; }
+
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  border-radius: 17px;
+  -webkit-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  -moz-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  -o-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+  height: 30px;
+  line-height: 30px;
+  opacity: 1;
+  text-align: center; }
 
 #skip a {
   position: absolute;
@@ -128,6 +183,7 @@ body {
   .header::after {
     content: "";
     position: absolute;
+    z-index: 900;
     width: 100%;
     height: 15px;
     top: 80px;
@@ -163,13 +219,11 @@ body {
 
 #pcGnb {
   height: 80px;
-  text-align: center;
-  display: none; }
+  text-align: center; }
   #pcGnb ul {
     margin: 0 auto; }
   #pcGnb > ul {
     width: 700px;
-    /* 692 */
     margin-top: 38px; }
     #pcGnb > ul > li {
       display: inline-block; }
@@ -179,38 +233,47 @@ body {
         display: block; }
       #pcGnb > ul > li > a {
         font-size: 18px;
-        border-bottom: 2px solid transparent;
-        padding-bottom: 8px;
-        background: pink; }
+        padding-bottom: 24px; }
       #pcGnb > ul > li:hover > a, #pcGnb > ul > li > a:focus, #pcGnb > ul > li.on > a {
-        border-bottom-color: #E60417; }
+        color: #E60417; }
   #pcGnb .dep2 {
     position: absolute;
     top: 80px;
     left: 0;
-    background: #FF7800;
     width: 100%;
-    height: 75px; }
+    z-index: 100;
+    overflow: hidden;
+    background: #FF7800; }
     #pcGnb .dep2 > li {
-      /* float: left; */
-      margin-top: 35px;
+      position: relative;
       display: inline-block;
-      position: relative; }
+      margin-top: 35px;
+      padding-bottom: 20px;
+      vertical-align: top; }
       #pcGnb .dep2 > li + li {
         margin-left: 95px; }
       #pcGnb .dep2 > li > a {
         color: #ffffff; }
-  #pcGnb .dep3 {
-    position: absolute;
-    width: 100%;
-    height: 523px;
+  #pcGnb > ul > li:nth-child(3).on .dep2::before, #pcGnb > ul > li:nth-child(4).on .dep2::before {
+    content: "";
+    position: fixed;
+    top: 155px;
     left: 0;
-    top: 75px;
+    right: 0;
+    height: 523px;
+    padding-top: 75px; }
+  #pcGnb .dep3 {
+    width: calc(100% + 20px);
+    height: 523px;
+    padding-top: 20px;
     background: #F3F3F3; }
     #pcGnb .dep3 > li {
       text-align: left; }
       #pcGnb .dep3 > li a {
         margin-top: 20px; }
+  #pcGnb > ul > li:nth-child(4) .dep3 {
+    height: auto;
+    padding-bottom: 40px; }
 
 #mHeader {
   display: none; }
@@ -231,6 +294,8 @@ body {
   -o-animation: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  visibility: hidden;
+  position: relative;
   width: 800px;
   height: 750px;
   border: solid 1px #707070;
@@ -247,13 +312,104 @@ body {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-animation: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
       content: "";
       position: absolute;
       width: 600px;
       height: 5px;
       background: #dddddd;
       top: 47px;
-      left: -202px; }
+      left: 50%; }
+  #modalCnt #apply {
+    margin: 43px 0 0 14px;
+    color: #444444; }
+    #modalCnt #apply .sub_tit {
+      margin-right: 30px; }
+    #modalCnt #apply .ntsans, #modalCnt #apply input[type="radio"] + label {
+      font-family: NtSansKR; }
+    #modalCnt #apply input[type="text"], #modalCnt #apply select, #modalCnt #apply textarea, #modalCnt #apply .copyTxt {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border-color: #dddddd; }
+    #modalCnt #apply input[type="text"], #modalCnt #apply select {
+      height: 40px; }
+    #modalCnt #apply input[type="radio"], #modalCnt #apply input[type="radio"]:checked, #modalCnt #apply input[type="checkbox"], #modalCnt #apply input[type="checkbox"]:checked {
+      appearance: none;
+      width: 15px;
+      height: 15px; }
+    #modalCnt #apply input[type="radio"], #modalCnt #apply input[type="radio"]:checked {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%; }
+    #modalCnt #apply input[type="checkbox"], #modalCnt #apply input[type="checkbox"]:checked {
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px; }
+    #modalCnt #apply input[type="radio"], #modalCnt #apply input[type="checkbox"] {
+      border: 2px solid #707070;
+      background: #ffffff no-repeat center; }
+    #modalCnt #apply input[type="radio"]:checked, #modalCnt #apply input[type="checkbox"]:checked {
+      border-color: #E60417; }
+    #modalCnt #apply input[type="radio"]:checked {
+      background-image: url("../images/common/circle_gradient_btn.svg");
+      background-size: 5px 5px; }
+    #modalCnt #apply input[type="checkbox"]:checked {
+      background-image: url("../images/icon/checked.svg");
+      background-color: #E60417; }
+    #modalCnt #apply #name {
+      width: 200px; }
+    #modalCnt #apply .age {
+      margin: 20px 0; }
+      #modalCnt #apply .age .sub_tit {
+        margin-right: 61px; }
+      #modalCnt #apply .age label {
+        margin-right: 10px; }
+      #modalCnt #apply .age label:last-child {
+        margin-right: 0; }
+    #modalCnt #apply #firstNum, #modalCnt #apply #midNum, #modalCnt #apply #lastNum {
+      width: 133px; }
+    #modalCnt #apply .where {
+      margin: 20px 0 10px; }
+      #modalCnt #apply .where #center {
+        margin-left: 15px; }
+    #modalCnt #apply #content {
+      width: 474px; }
+    #modalCnt #apply .content * {
+      vertical-align: middle; }
+    #modalCnt #apply .copyTxt {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow: auto;
+      padding: 6px 7px;
+      width: 100%;
+      height: 90px;
+      background: #fff;
+      margin-bottom: 14px;
+      font-size: 10px;
+      border: 1px solid #dddddd; }
+    #modalCnt #apply .agree_txt {
+      font-size: 12px;
+      margin-left: 5px; }
+  #modalCnt button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+    font-size: 20px;
+    width: 175px;
+    height: 64px;
+    line-height: 64px; }
+  #modalCnt .cancle {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: -12px;
+    right: -6px; }
 
 @media screen and (max-width: 1439px) {
   .max1440 {
