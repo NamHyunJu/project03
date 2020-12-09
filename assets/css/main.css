@@ -1,9 +1,3 @@
-/*@mixin gradient{
-    -webkit-background-color: linear-gradient(0deg, rgba(230,4,16,1) 0%, rgba(255,120,0,1) 100%);
-    -moz-background-color: linear-gradient(0deg, rgba(230,4,16,1) 0%, rgba(255,120,0,1) 100%);
-    -o-background-color: linear-gradient(0deg, rgba(230,4,16,1) 0%, rgba(255,120,0,1) 100%);
-    background-color: linear-gradient(0deg, rgba(230,4,16,1) 0%, rgba(255,120,0,1) 100%);
-}*/
 .tit {
   font-size: 35px;
   text-align: center;
@@ -205,6 +199,7 @@
     position: absolute;
     line-height: 40px; }
     #cnt3 .txt strong {
+      display: inline-block;
       font-size: 50px; }
     #cnt3 .txt p {
       font-size: 25px;
@@ -328,8 +323,11 @@
     margin-top: -70px;
     border-color: transparent; }
     #cnt4 ul li:hover .txt, #cnt4 ul li:focus .txt {
-      padding-top: 20px;
+      -webkit-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+      -moz-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+      -o-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
       background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+      padding-top: 20px;
       color: #ffffff; }
       #cnt4 ul li:hover .txt .date, #cnt4 ul li:focus .txt .date {
         color: #ffffff; }
@@ -357,6 +355,9 @@
   #cnt5 .tab + li {
     margin-left: 381px; }
   #cnt5 .tab:focus, #cnt5 .tab.on {
+    -webkit-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+    -moz-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
+    -o-background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
     background: linear-gradient(0deg, #e60410 0%, #ff7800 100%);
     color: #ffffff; }
 #cnt5 .accordion {
