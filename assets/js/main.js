@@ -50,5 +50,11 @@ $(document).ready(function(){
       }
     });
 
+    //본문4 li.on
+    var _cnt4_li=$('#cnt4 ul li');
+    _cnt4_li.attr({tabIndex:0});
+    _cnt4_li.on('mouseenter focus',function(){
+      $(this).addClass('on').siblings().removeClass('on');
+    });
 
 });
