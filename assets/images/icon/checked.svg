@@ -1,1 +1,13 @@
-<?xml version="1.0" ?><svg style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M10,18c-0.5,0-1-0.2-1.4-0.6l-4-4c-0.8-0.8-0.8-2,0-2.8c0.8-0.8,2.1-0.8,2.8,0l2.6,2.6l6.6-6.6   c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8l-8,8C11,17.8,10.5,18,10,18z" id="check"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g id="info">
+</g>
+<g id="icons">
+	<path id="check" fill="#FFFFFF" d="M20.833,37.5c-1.042,0-2.083-0.416-2.917-1.25l-8.333-8.334c-1.667-1.666-1.667-4.166,0-5.833
+		c1.667-1.667,4.375-1.667,5.833,0l5.417,5.417l13.75-13.75c1.666-1.667,4.166-1.667,5.832,0c1.668,1.667,1.668,4.167,0,5.833
+		L23.75,36.25C22.917,37.084,21.875,37.5,20.833,37.5z"/>
+</g>
+</svg>
