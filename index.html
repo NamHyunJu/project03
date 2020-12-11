@@ -112,7 +112,7 @@
                     </ul>
                 </nav>
                 <button class="teacher round gradient more" type="button">재능선생님 모집</button>
-                <button class="inquiry" type="button" aria-haspopup="dialog" title="대화상자" data-targetmodal="#modalCnt">문의<br>하기</button>
+                <button class="inquiry md_open" type="button" aria-haspopup="dialog" title="대화상자" data-targetmodal="#modalCnt">문의<br>하기</button>
         </header>
         <header class="header" id="mHeader">
             <h1 class="logo"><a href="assets/images/icon/logo.png" srcset=""><span class="blind-b">재능교육</span></a></h1>
@@ -382,13 +382,13 @@
                 <div class="max1440">
                     <div id="questionTab">
                         <ul class="tablist" role="tablist" aria-label="연령별 질의응답">
-                            <li class="tab" id="tab1" role="tab" aria-controls="tabpanal1">유아</li>
-                            <li class="tab" id="tab2" role="tab" aria-controls="tabpanal2">초등학생 이상</li>
+                            <li class="tab first" id="tab1" role="tab" aria-controls="tabpanal1">유아</li>
+                            <li class="tab last" id="tab2" role="tab" aria-controls="tabpanal2">초등학생 이상</li>
                         </ul>
                         <div class="tabpanel" id="tabpanal1" role="tabpanel" aria-labelledby="tab1">
                             <div id="questionAcco1" class="accordion">
                                 <h3>
-                                    <button type="button" id="accoHeader1" class="accoheader" aria-controls="accoPanel1">
+                                    <button type="button" id="accoHeader1" class="accoheader first" aria-controls="accoPanel1">
                                         <span class="blind-b">질문</span>매사에 호기심이 너무 많아서 질문이 많은데 어떻게 지도해야 하나요?
                                     </button>
                                 </h3>
@@ -431,7 +431,7 @@
                                         <span class="blind-b">질문</span>아이 혼자서 공부 할 수 있나요?
                                     </button>
                                 </h3>
-                                <div id="accoPanel5" class="accopanel" role="region" aria-labelledby="accoHeader5">
+                                <div id="accoPanel5" class="accopanel last" role="region" aria-labelledby="accoHeader5">
                                     <p><span class="blind-b">답변</span>과학적인 학습평가시스템을 통해 아이의 학습 정도와 능력을 정확하게 파악한 뒤, 모르는 부분 직전의 할 수 있는 부분부터 학습과정을 세분화하여 단계적으로 진행하기 때문에 아이가 혼자서 충분히 쉽게 공부할 수 있습니다.</p>
                                 </div>
 
@@ -441,7 +441,7 @@
                         <div class="tabpanel" id="tabpanal2" role="tabpanel" aria-labelledby="tab2">
                             <div id="questionAcco2" class="accordion">
                                 <h3>
-                                    <button type="button" id="acco2Header1" class="accoheader" aria-controls="accoPanel1">
+                                    <button type="button" id="acco2Header1" class="accoheader first" aria-controls="accoPanel1">
                                         <span class="blind-b">질문</span>학교진도에 맞추지 않으면 불안한데 어떻게 하죠?
                                     </button>
                                 </h3>
@@ -479,7 +479,7 @@
                                         따라서 연산의 숙달이 필요한 아이라면 짧은 시간이라도 매일 꾸준하게 연습하는 것이 더 좋습니다.</p>
                                 </div>
                                 <h3>
-                                    <button type="button" id="acco2Header5" class="accoheader" aria-controls="accoPanel5">
+                                    <button type="button" id="acco2Header5" class="accoheader last" aria-controls="accoPanel5">
                                         <span class="blind-b">질문</span>혼자 책을 읽으려고 하지 않아요
                                     </button>
                                 </h3>
@@ -527,7 +527,7 @@
                                 <p class="copy">Copyright © JEI corporation. All rights reserved.</p>
                             </div>
                             <div class="foot_right">
-                                <div class="select_box family">
+                                <div class="family">
                                     <button class="f_select round opaque more" type="button">FAMILY SITE</button>
                                     <ul class="clearfix">
                                         <li>교육ㆍ출판
@@ -595,7 +595,7 @@
             </section>
         </div>
     </div>
-    <div id="dim"></div>
+    <!-- <div id="dim"></div> -->
     <div id="modalCnt" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="inquiryTit">
         <h3 id="inquiryTit">무료 상담 신청</h3>
         <form action="" method="" id="apply">
@@ -652,7 +652,7 @@
             <input type="checkbox" name="agree" id="agree"><label for="agree" class="agree_txt ntsans">개인정보수집 및 이용에 동의합니다.</label>
         </form>
         <button type="submit" class="more round gradient">신청하기</button>
-        <button type="button" class="last cancle" title="취소하기"><img src="assets/images/icon/close_btn.svg" alt="취소하기"></button>
+        <button type="button" class="last md_close" title="취소하기"><img src="assets/images/icon/close_btn.svg" alt="취소하기"></button>
     </div>
 </body>
 </html>
