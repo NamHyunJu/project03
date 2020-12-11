@@ -128,7 +128,7 @@ $(document).ready(function(){
      //#cnt6에 오면 문의하기 버튼 이동
      $(window).on('scroll',function(e){
         //console.log($(this).scrollTop()); 4685
-        if($(this).scrollTop()===4685) {$('.md_open').stop().animate({bottom:190});}
+        if($(this).scrollTop()===4685) {$('.md_open').stop().animate({bottom:200});}
         else{$('.md_open').stop().animate({bottom:70});}
           
       });
