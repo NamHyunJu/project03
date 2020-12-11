@@ -57,4 +57,33 @@ $(document).ready(function(){
       $(this).addClass('on').siblings().removeClass('on');
     });
 
+
+    
+
+
+
+
+    /* 
+    Y축 방향으로 스크롤바 이동거리 크로스 브라우징
+    function getScrollTop()
+{
+    if(window.pageYOffset !== undefined)
+    {
+        return window.pageYOffset;
+    } else {
+        return document.documentElement.scrollTop || document.body.scrollTop;
+    }
+}
+
+function getScrollLeft()
+{
+    if(window.pageXOffset !== undefined)
+    {
+        return window.pageXOffset;
+    } else {
+        return document.documentElement.scrollLeft || document.body.scrollLeft;
+    }
+}
+    */
+    
 });

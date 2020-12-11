@@ -35,58 +35,25 @@ header,nav,section,footer{display: block;}
 
 body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-size: 16px;line-height: 1.25;word-break: keep-all;letter-spacing: 0.03;}
 
-//fullpage
-#fp-nav.fp-right {
-    right:86px;
-}
-#fp-nav ul li a span{
-    @include boxsizing;
-    height: 14px;
-    width: 14px;
-    margin: 0;
-    border: 2px solid $red;
-    background: transparent;
-}
-#fp-nav ul li a.active span,#fp-nav ul li:hover a span,#fp-nav ul li:hover a.active span{
-    @include gradient;
-    height: 14px;
-    width: 14px;
-    margin: 0;
-    border: none;
- }
- #fp-nav ul li .fp-tooltip {
-     @include boxsizing;
-    top: 0;
-    font-family: jalnan,NtSansKR,serif;
-    padding: 0 8px;
-}
-#fp-nav ul li:hover .fp-tooltip,
-#fp-nav.fp-show-active a.active + .fp-tooltip {
-    @include radius(17px);
-    @include gradient;
-    height: 30px;line-height: 30px;
-    opacity: 1;
-    text-align: center;
-}
-
 #skip a{
     position: absolute;top: 0;left: -9999px;width: 100%;height: 95px;color: #ffffff;background: $orange;font-size: 25px;text-align: center;line-height: 95px;z-index: 1000;
     &:focus{left: 0;}
 }
 
 .header{
-    position: fixed;top: 0;left: 0;width: 100%;height: 80px;z-index: 900;background: #ffffff;
+    position: fixed;top: 0;left: 0;width: 100%;height: 80px;z-index: 900;background: #fff;
     &::after{
         content: "";position: absolute;z-index: 900;width: 100%;height: 15px;top: 80px;left: 0;background: url("../images/common/bg_header.svg") repeat-x left bottom;
     }
+    .logo,.teacher{@include transY-50;top: 50%;}
     .logo{
-        float: left;margin-left: 255px;padding-top: 34px;
+        position: absolute;left: 15px;width: 236px;height: 26px;
         img{
             @include bgsize(cover);
-            display: block;width: 236px;height: 26px;
+            display: block;width: 100%;height: 100%;
         }
     }
-    .teacher{position: absolute;top: 17px;right: 254px;width: 179px;height: 50px;font-size: 20px;}
+    .teacher{position: absolute;right: 15px;width: 179px;height: 50px;font-size: 20px;}
     .inquiry{
         position: fixed;bottom: 70px;right: 290px;width: 80px;height: 80px;background: url("../images/common/circle_gradient_btn.svg") no-repeat;color: #ffffff;font-size: 22px;
     }
@@ -95,7 +62,8 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
     height: 80px;text-align: center;
     ul{margin: 0 auto;}
     >ul{
-        width: 700px;margin-top: 38px;
+        @include boxsizing;
+        width: 700px;padding-top: 30px;
         >li{
             display: inline-block;
             &+li{margin-left: 88px;}
@@ -124,69 +92,77 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 }
 #mHeader{display: none;}
 
-#cnt6 .footer{
-    position: relative;color: #ffffff;background: url("../images/common/bg_footer.svg") no-repeat;width: 100%;height: 568px;margin-top: 63px;
-    span{
-        display: inline-block;
-        &+span{margin-left: 40px;}
-    }
-    .foot_top{
-        height: 125px;padding: 170px 0 0 15px; border-bottom: solid 1px #786756;
-        >p{margin-bottom: 20px;}
-        strong{font-size: 40px;color: #6a3200;}
-        .txt{
-            display: inline-block;margin-left: 32px;
-            p+p{margin-top: 8px;}
+#cnt6{
+    /* overflow: hidden; */
+    .footer{
+        @include bgsize(cover);
+        position: relative;color: #ffffff;background: url("../images/common/bg_footer.svg") no-repeat;width: 100%;height: 460px;margin-top: 60px;
+        span{
+            display: inline-block;
+            &+span{margin-left: 40px;}
         }
-    }
-    .foot_btm{padding-left: 15px;}
-    .foot_left{
-        font-size: 14px;width: 800px;margin-top: 67px;
-        .first{
-            .privacy{margin-left: 40px;color: #6a3200;}
-        }
-        .mid{margin: 14px 0 24px;}
-    }
-    .foot_right{
-        @include boxsizing;
-        position: absolute;bottom: 111px;;right: 300px;width: 300px;
-        .family{
-            .f_select,.go{font-size: 18px;height: 50px;line-height: 50px;}
-            .f_select{
-                position: relative;width: 179px;padding-right: 25px;
-                &::after{
-                    @include transY-50;
-                    content:"";position: absolute;top: 50%;right: 15px;width: 16px;height: 9.1px;background: url("../images/icon/down_white.svg") no-repeat center;
-                }
-                &.on::after{background-image: url("../images/icon/up_white.svg");}
+        .foot_top{
+            height: 115px;padding: 130px 0 0 15px; border-bottom: solid 1px #786756;
+            >p{margin-bottom: 20px;}
+            strong{font-size: 40px;color: #6a3200;}
+            .txt{
+                display: inline-block;margin-left: 32px;
+                p+p{margin-top: 8px;}
             }
-            >ul{
-                position: absolute;width: 850px;height: 375px;right: 0;top: -415px;text-align: center;
-                >li{
-                    position: relative;float: left;width: 20%;height: 50px;line-height: 50px;color: #ffffff;background: $orange;
-                    &:first-child{
-                        @include radius(10px 0 0 0);
-                        ul{@include radius(0 0 0 10px);}
-                    }
-                    &:last-child{
-                        @include radius(0 10px 0 0);
-                        ul{@include radius(0 0 10px 0);}
-                    }
-                    &::after{content:"";position: absolute;width: 1px;height: 100%;top: 0;right: 0;background: #fff;}
-                }
-                >li ul{
-                    background: $gray;height: 325px;padding-top: 20px;border-right: 1px solid $orange;
-                    &.global{border: none;}
-                    li{font-size: 13px;color: #222222;height: 13px;line-height: 13px;padding-bottom: 25px;}
-                }
-            }
-            .go{width: 75px;margin-left: 25px;}
         }
-        .sns{
-            margin-top: 23px;
-            li{
-                float: left;margin-left: 25px;
-                img{width: 44px;height: 44px;}
+        .foot_btm{padding-left: 15px;}
+        .foot_left{
+            font-size: 14px;width: 800px;margin-top: 30px;
+            .first{
+                .privacy{margin-left: 40px;color: #6a3200;}
+            }
+            .mid{margin: 14px 0 24px;}
+        }
+        .foot_right{
+            @include boxsizing;
+            position: absolute;bottom: 80px;;right: 300px;width: 298px;
+            .family{
+                text-align: right;padding-right: 25px;
+                .f_select{font-size: 18px;height: 48px;line-height: 50px;}
+                .f_select{
+                    position: relative;width: 179px;padding-right: 25px;
+                    &::after{
+                        @include transY-50;
+                        content:"";position: absolute;top: 50%;right: 15px;width: 16px;height: 9.1px;background: url("../images/icon/down_white.svg") no-repeat center;
+                    }
+                    &.on::after{background-image: url("../images/icon/up_white.svg");}
+                }
+                >ul{
+                    position: absolute;width: 850px;height: 375px;right: 0;top: -415px;text-align: center;
+                    >li{
+                        position: relative;float: left;width: 20%;height: 50px;line-height: 50px;color: #ffffff;background: $orange;
+                        &:first-child{
+                            @include radius(10px 0 0 0);
+                            ul{@include radius(0 0 0 10px);}
+                        }
+                        &:last-child{
+                            @include radius(0 10px 0 0);
+                            ul{@include radius(0 0 10px 0);}
+                        }
+                        &::after{content:"";position: absolute;width: 1px;height: 100%;top: 0;right: 0;background: #fff;}
+                    }
+                    >li ul{
+                        background: $gray;height: 325px;padding-top: 20px;border-right: 1px solid $orange;
+                        &.global{border: none;}
+                        li{
+                            font-size: 13px;color: #222222;height: 13px;line-height: 13px;padding-bottom: 25px;
+                            &:hover,&>a:focus{color: $orange;}
+                        }
+                    }
+                }
+                /* .go{width: 75px;margin-left: 25px;} */
+            }
+            .sns{
+                margin-top: 23px;
+                li{
+                    float: left;margin-left: 25px;
+                    img{width: 44px;height: 44px;}
+                }
             }
         }
     }

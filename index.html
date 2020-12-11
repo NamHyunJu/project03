@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="assets/css/font.css">
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/fullpage.min.js"></script>
+    <script type="text/javascript" src="assets/js/scrolloverflow.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/fullpage.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/main.js"></script>
 </head>
     <div id="skip"><a href="#cnt1">본문 바로가기</a></div>
     <div id="wrap">
         <header class="header" id="pcHeader">
+            <div class="max1440 p_r">
                 <h1 class="logo"><a href="index.html"><img src="assets/images/icon/logo.png" alt="재능교육"></a></h1>
                 <nav id="pcGnb">
                     <ul>
@@ -113,6 +116,7 @@
                 </nav>
                 <button class="teacher round gradient more" type="button">재능선생님 모집</button>
                 <button class="inquiry md_open" type="button" aria-haspopup="dialog" title="대화상자" data-targetmodal="#modalCnt">문의<br>하기</button>
+            </div>
         </header>
         <header class="header" id="mHeader">
             <h1 class="logo"><a href="assets/images/icon/logo.png" srcset=""><span class="blind-b">재능교육</span></a></h1>
@@ -332,48 +336,50 @@
                     </div>
                 </div>
             </section>
-            <section class="section p_r" id="cnt4">
+            <section class="section" id="cnt4">
                 <h2 class="tit">이벤트 & 혜택</h2>
                 <p>재능만의 이벤트와 혜택을 확인하세요</p>
                 <span><img src="assets/images/main/dot_pattern.svg" alt=""></span>
-                <ul class="clearfix max1440">
-                    <li>
-                        <img src="assets/images/main/event01.PNG" alt="">
-                        <div class="txt">
-                            <p class="benefit more round">혜택</p>
-                            <strong class="sub_tit">2020 봄 재능회원 <서울랜드> 특별 할인</strong>
-                            <p class="date">2020.03.26 ~ 2020.07.01</p>
-                            <button class="round more white" type="button">자세히 보기</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/images/main/event02.PNG" alt="">
-                        <div class="txt">
-                            <p class="event more round">이벤트</p>
-                            <strong class="sub_tit">2020 봄 재능회원 <서울랜드> 특별 할인</strong>
-                            <p class="date">2020.03.26 ~ 2020.07.01</p>
-                            <button class="round more white" type="button">자세히 보기</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/images/main/event03.PNG" alt="">
-                        <div class="txt">
-                            <p class="benefit more round">혜택</p>
-                            <strong class="sub_tit">2020 가을 재능회원 <서울랜드> 특별 할인</strong>
-                            <p class="date">2020.09.05 ~ 2020.11.30</p>
-                            <button class="round more white" type="button">자세히 보기</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="assets/images/main/event04.PNG" alt="">
-                        <div class="txt">
-                            <p class="event more round">이벤트</p>
-                            <strong class="sub_tit">2020 봄 재능회원 <서울랜드> 특별 할인</strong>
-                            <p class="date">2020.03.26 ~ 2020.07.01</p>
-                            <button class="round more white" type="button">자세히 보기</button>
-                        </div>
-                    </li>
-                </ul>
+                <div class="max1440 p_r">
+                    <ul class="clearfix">
+                        <li>
+                            <img src="assets/images/main/event01.PNG" alt="">
+                            <div class="txt">
+                                <p class="benefit more round">혜택</p>
+                                <strong class="sub_tit">2020 봄 재능회원 <서울랜드> 특별 할인</strong>
+                                <p class="date">2020.03.26 ~ 2020.07.01</p>
+                                <button class="round more white" type="button">자세히 보기</button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/main/event02.PNG" alt="">
+                            <div class="txt">
+                                <p class="event more round">이벤트</p>
+                                <strong class="sub_tit">2020 봄 재능회원 <서울랜드> 특별 할인</strong>
+                                <p class="date">2020.03.26 ~ 2020.07.01</p>
+                                <button class="round more white" type="button">자세히 보기</button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/main/event03.PNG" alt="">
+                            <div class="txt">
+                                <p class="benefit more round">혜택</p>
+                                <strong class="sub_tit">2020 가을 재능회원 <서울랜드> 특별 할인</strong>
+                                <p class="date">2020.09.05 ~ 2020.11.30</p>
+                                <button class="round more white" type="button">자세히 보기</button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/main/event04.PNG" alt="">
+                            <div class="txt">
+                                <p class="event more round">이벤트</p>
+                                <strong class="sub_tit">2020 봄 재능회원 <서울랜드> 특별 할인</strong>
+                                <p class="date">2020.03.26 ~ 2020.07.01</p>
+                                <button class="round more white" type="button">자세히 보기</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="section" id="cnt5">
                 <h2 class="tit">꼼꼼 질문방</h2>
@@ -494,7 +500,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section" id="cnt6">
+            <section class="section fp-auto-height" id="cnt6">
                 <h2 class="blind-b">모바일 앱 다운</h2>
                 <div class="max1440">
                     <p class="tit">코로나 시대! 안전하게 모바일앱으로 만나요~</p>
@@ -502,7 +508,7 @@
                         <strong>재능이랑<span>다운받기</span></strong>
                     </a>
                 </div>
-                <footer id="footer" class="footer p_r">
+                <footer  class="footer p_r">
                     <div class="max1440">
                         <div class="foot_top">
                             <p>재능교육 고객센터</p>
@@ -580,7 +586,7 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                    <button class="go round opaque more" type="button">이동</button>
+                                    <!-- <button class="go round opaque more" type="button">이동</button> -->
                                 </div>
                                 <ul class="sns clearfix">
                                     <li><a href=""><img src="assets/images/icon/sns_instagram.svg" alt="인스타그램"></a></li>

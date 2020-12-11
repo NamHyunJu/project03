@@ -1,13 +1,4 @@
 $(document).ready(function(){
-    //fullpage
-    $('#fullpage').fullpage({      
-        autoScrolling:true,
-        scrollBar: true,
-        scrollHorizontally: true,
-        navigation: true,
-        navigationTooltips: ['재능교육의 가치관', '추천 상품', '연령별 상품 소개', '이벤트 및 혜택', '자주찾는 질문', '모바일 앱 다운']
-	});
-
     //pcGnb
     var _pcGnb = $('#pcGnb > ul');
     _pcGnb.find('> li > ul').hide();
@@ -68,14 +59,10 @@ $(document).ready(function(){
      _acco.find('.first').attr({'aria-expanded':true}).addClass('active').parent().next().show();//css(display:block)경고뜸 왜?
 
      _acco.find('.accoheader').on('click',function(){
-         //열려있는건 닫고, 닫혀있는건 열기
-         if($(this).parent().hasClass('active')) {
-             $(this).attr({'aria-expanded':false}).parent().removeClass('active').next().stop().slideUp('fast').attr({tabIndex:-1});
-         } else {
-             $(this).attr({'aria-expanded':true,'aria-disabled':false}).parent().addClass('active').siblings('h3.active').removeClass('active');
 
-             $(this).parent().next().attr({tabIndex:0}).stop().slideDown('fast').siblings('.accopanel').next().attr({tabIndex:-1}).stop().slideUp('fast');
-         }
+             $(this).attr({'aria-expanded':true,'aria-disabled':false}).parent().addClass('active').siblings('h3.active').removeClass('active').children().attr({'aria-expanded':false});
+
+             $(this).parent().next().attr({tabIndex:0}).stop().slideDown('fast').siblings('.accopanel').attr({tabIndex:-1}).stop().slideUp('fast');
      });
      _acco.find('.accoheader').on('keydown',function(e){
         var key=e.keyCode;
@@ -137,6 +124,14 @@ $(document).ready(function(){
             if(e.keyCode===27) _mdClose.click();
         });
      });
+
+     //#cnt6에 오면 문의하기 버튼 이동
+     $(window).on('scroll',function(e){
+        //console.log($(this).scrollTop()); 4685
+        if($(this).scrollTop()===4685) {$('.md_open').stop().animate({bottom:190});}
+        else{$('.md_open').stop().animate({bottom:70});}
+          
+      });
 
      //family site
      var _familyList=$('.foot_right .family>ul');

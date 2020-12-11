@@ -2,3 +2,11 @@
     $vwSize:$px*100/412;
     @return #{$vwSize}vw;
 }
+@function perWid1920($px){
+    $perSize:$px*100/1920;
+    @return #{$perSize+'%'};
+}
+@function perHei960($px){
+    $perSize:$px*100/960;
+    @return #{$perSize+'%'};
+}
