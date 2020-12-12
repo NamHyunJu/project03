@@ -1,23 +1,31 @@
 $(document).ready(function(){
+    var timer=0;
+
     $('#cnt1').attr({tabIndex:0});
+
+    //fade
+    
 
     //pcGnb
     var _pcGnb = $('#pcGnb > ul');
     _pcGnb.find('> li > ul').hide();
-    _pcGnb.find('> li').on('mouseenter focusin', function () {
-        $(this).find('>ul').stop().slideDown().parent().addClass('on').siblings().removeClass('on');
-        /* $('.header_wrap').addClass('active'); */
+
+    _pcGnb.find('> li').on('mouseenter', function () {
+        _pcGnb.find('> li.on').removeClass('on').children('ul').hide();
+        $(this).addClass('on').children('ul').stop().slideDown();
+    });
+    _pcGnb.find('> li > a').on('focus', function () {
+        _pcGnb.find('> li.on').removeClass('on').children('ul').hide();
+        $(this).next().stop().slideDown().parent().addClass('on');
     });
     _pcGnb.on('mouseleave', function () {
-        $(this).find('> li.on').removeClass('on').children('ul').stop().slideUp();
-        /* $('.header_wrap').removeClass('active'); */
+        _pcGnb.find('> li.on').removeClass('on').children('ul').hide();
     });
     _pcGnb.find('a:first, a:last').on('blur', function () {
         setTimeout(function () {
-        if ( !$('#pcGnb a').is(':focus') ) _pcGnb.trigger('mouseleave');
+            if ( !$('#pcGnb a').is(':focus') ) _pcGnb.trigger('mouseleave');
         }, 10);
     });
-
     //tab
     $('.tab:first-of-type,.tabpanel:first-of-type').show().addClass('on').attr('tabIndex',0);
     $('.tab').eq(0).attr('aria-selected',true).siblings().attr('aria-selected',false);
@@ -128,10 +136,13 @@ $(document).ready(function(){
 
      //#cnt6에 오면 문의하기 버튼 이동
      $(window).on('scroll',function(){
-        //console.log($(this).scrollTop());
-        if($(this).scrollTop()>=4685) {$('.md_open').stop().animate({bottom:200});}
-        else{$('.md_open').stop().animate({bottom:70});}
-          
+        clearTimeout(timer);
+        timer=setTimeout(function(){
+            var scrollY=$(this).scrollTop();
+            var scrollBtm=scrollY+$(this).height();
+            if(scrollY>=4685) {$('.md_open').stop().animate({bottom:200});}
+            else{$('.md_open').stop().animate({bottom:70});}    
+        },50);
       });
 
      //family site

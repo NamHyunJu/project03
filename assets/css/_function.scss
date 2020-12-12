@@ -2,6 +2,10 @@
     $vwSize:$px*100/412;
     @return #{$vwSize}vw;
 }
+@function vw1920($px){
+    $vwSize:$px*100/1920;
+    @return #{$vwSize}vw;
+}
 @function perWid1920($px){
     $perSize:$px*100/1920;
     @return #{$perSize+'%'};
