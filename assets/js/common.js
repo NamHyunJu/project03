@@ -1,13 +1,16 @@
 $(document).ready(function(){
+    $('#cnt1').attr({tabIndex:0});
+
     //pcGnb
     var _pcGnb = $('#pcGnb > ul');
     _pcGnb.find('> li > ul').hide();
-    _pcGnb.find('> li > a').on('mouseenter focus', function () {
-        _pcGnb.find('> li.on').removeClass('on').children('ul').hide();
-        $(this).next().stop().slideDown().parent().addClass('on');
+    _pcGnb.find('> li').on('mouseenter focusin', function () {
+        $(this).find('>ul').stop().slideDown().parent().addClass('on').siblings().removeClass('on');
+        /* $('.header_wrap').addClass('active'); */
     });
     _pcGnb.on('mouseleave', function () {
         $(this).find('> li.on').removeClass('on').children('ul').stop().slideUp();
+        /* $('.header_wrap').removeClass('active'); */
     });
     _pcGnb.find('a:first, a:last').on('blur', function () {
         setTimeout(function () {
@@ -23,7 +26,7 @@ $(document).ready(function(){
     $('.tab').on('click',function(){
         $(this).addClass('on').attr({tabIndex:0,'aria-selected':true}).siblings('.on').removeClass('on').attr({tabIndex:-1,'aria-selected':false});
 
-         var tabNum=$(this).index();//0 1
+         var tabNum=$(this).index();
          $('.tabpanel').eq(tabNum).show().addClass('on').attr({tabIndex:0,'aria-hidden':false}).siblings('.tabpanel.on').removeClass('on').hide().attr({tabIndex:-1,'aria-hidden':true});
      });
 
@@ -56,17 +59,15 @@ $(document).ready(function(){
      //accordion
      var _acco=$('.accordion');
      _acco.find('.accoheader').attr({'aria-expanded':false});
-     _acco.find('.first').attr({'aria-expanded':true}).addClass('active').parent().next().show();//css(display:block)경고뜸 왜?
+     _acco.find('.first').attr({'aria-expanded':true}).addClass('active').parent().next().show();
 
      _acco.find('.accoheader').on('click',function(){
-
-             $(this).attr({'aria-expanded':true,'aria-disabled':false}).parent().addClass('active').siblings('h3.active').removeClass('active').children().attr({'aria-expanded':false});
+             $(this).attr({'aria-expanded':true,'aria-disabled':true}).parent().addClass('active').siblings('h3.active').removeClass('active').children().attr({'aria-expanded':false});
 
              $(this).parent().next().attr({tabIndex:0}).stop().slideDown('fast').siblings('.accopanel').attr({tabIndex:-1}).stop().slideUp('fast');
      });
      _acco.find('.accoheader').on('keydown',function(e){
         var key=e.keyCode;
-        //home(36) end(35) 아래(40) 위(38)
         switch(key) {
             case 40:
                 if($(this).hasClass('last')) {$(this).closest('.accordion').find('.first').focus();}
@@ -121,14 +122,14 @@ $(document).ready(function(){
         });
         //Esc를 누른경우 닫힌다
         $(window).on('keydown',function(e){
-            if(e.keyCode===27) _mdClose.click();
+            if(e.keyCode===27) _mdClose.trigger('click');
         });
      });
 
      //#cnt6에 오면 문의하기 버튼 이동
-     $(window).on('scroll',function(e){
-        //console.log($(this).scrollTop()); 4685
-        if($(this).scrollTop()===4685) {$('.md_open').stop().animate({bottom:200});}
+     $(window).on('scroll',function(){
+        //console.log($(this).scrollTop());
+        if($(this).scrollTop()>=4685) {$('.md_open').stop().animate({bottom:200});}
         else{$('.md_open').stop().animate({bottom:70});}
           
       });

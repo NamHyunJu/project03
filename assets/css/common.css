@@ -127,57 +127,63 @@ body {
   #skip a:focus {
     left: 0; }
 
-.header {
+.header_wrap {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
   z-index: 900;
-  background: #fff; }
-  .header::after {
+  background: #fff;
+  /* &::before{
+      background: yellow;height: 0;
+      &.active::before{height: auto;}
+  } */ }
+  .header_wrap::before, .header_wrap::after {
     content: "";
     position: absolute;
-    z-index: 900;
-    width: 100%;
-    height: 15px;
     top: 80px;
     left: 0;
+    width: 100%; }
+  .header_wrap::after {
+    z-index: 900;
+    height: 15px;
     background: url("../images/common/bg_header.svg") repeat-x left bottom; }
-  .header .logo, .header .teacher {
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-animation: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    top: 50%; }
-  .header .logo {
-    position: absolute;
-    left: 15px;
-    width: 236px;
-    height: 26px; }
-    .header .logo img {
-      -webkit-background-size: cover !important;
-      -moz-background-size: cover !important;
-      background-size: cover !important;
-      display: block;
-      width: 100%;
-      height: 100%; }
-  .header .teacher {
-    position: absolute;
-    right: 15px;
-    width: 179px;
-    height: 50px;
-    font-size: 20px; }
-  .header .inquiry {
-    position: fixed;
-    bottom: 70px;
-    right: 290px;
-    width: 80px;
-    height: 80px;
-    background: url("../images/common/circle_gradient_btn.svg") no-repeat;
-    color: #ffffff;
-    font-size: 22px; }
+
+.header .logo, .header .teacher {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-animation: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%; }
+.header .logo {
+  position: absolute;
+  left: 15px;
+  width: 236px;
+  height: 26px; }
+  .header .logo img {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    display: block;
+    width: 100%;
+    height: 100%; }
+.header .teacher {
+  position: absolute;
+  right: 15px;
+  width: 179px;
+  height: 50px;
+  font-size: 20px; }
+.header .inquiry {
+  position: fixed;
+  bottom: 70px;
+  right: 290px;
+  width: 80px;
+  height: 80px;
+  background: url("../images/common/circle_gradient_btn.svg") no-repeat;
+  color: #ffffff;
+  font-size: 22px; }
 
 #pcGnb {
   height: 80px;
@@ -225,17 +231,17 @@ body {
     top: 155px;
     left: 0;
     right: 0;
-    height: 523px;
     padding-top: 75px; }
   #pcGnb .dep3 {
     width: calc(100% + 20px);
-    height: 523px;
-    padding-top: 20px;
-    background: #F3F3F3; }
+    /* height: 523px; */
+    padding-top: 20px; }
     #pcGnb .dep3 > li {
       text-align: left; }
       #pcGnb .dep3 > li a {
         margin-top: 20px; }
+      #pcGnb .dep3 > li:hover a, #pcGnb .dep3 > li a:focus {
+        color: #ffffff; }
   #pcGnb > ul > li:nth-child(4) .dep3 {
     height: auto;
     padding-bottom: 40px; }
