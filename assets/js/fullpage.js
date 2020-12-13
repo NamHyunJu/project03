@@ -8,6 +8,7 @@ $(document).ready(function(){
             else fullpage_api.destroy('all'); 
         },50);
     });
+    $(window).trigger('resize');
     function creatFullpage(){
         $('#fullpage').fullpage({      
             autoScrolling:true,

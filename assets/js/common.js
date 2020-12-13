@@ -3,18 +3,24 @@ $(document).ready(function(){
 
     $('#cnt1').attr({tabIndex:0});
 
-    //fade
-    
+    /*fade
+    $(window).on('scroll',function(){
+        clearTimeout(timer);
+        timer=setTimeout(function(){
+            var scrollY=$(this).scrollTop();
+            $('.fade').each(function(){
+                if(scrollY>$(this).offset().top-600) $(this).addClass('on');
+            });
+        },50);
+    });
+    $(window).trigger('scroll');*/
 
+    
     //pcGnb
     var _pcGnb = $('#pcGnb > ul');
     _pcGnb.find('> li > ul').hide();
 
-    _pcGnb.find('> li').on('mouseenter', function () {
-        _pcGnb.find('> li.on').removeClass('on').children('ul').hide();
-        $(this).addClass('on').children('ul').stop().slideDown();
-    });
-    _pcGnb.find('> li > a').on('focus', function () {
+    _pcGnb.find('> li > a').on('mouseenter focus', function () {
         _pcGnb.find('> li.on').removeClass('on').children('ul').hide();
         $(this).next().stop().slideDown().parent().addClass('on');
     });
@@ -134,16 +140,20 @@ $(document).ready(function(){
         });
      });
 
-     //#cnt6에 오면 문의하기 버튼 이동
+     //스크롤바가 제일 하단이면 문의하기 버튼 이동
+     /* 
+        $(document).height() - $(this).height()은 스크롤바를 문서의 가장 하단까지 내렸을때를 의미함
+        스크롤을 가장 하단으로 내렸을때 보다 푸터의 높이만큼을 빼주면 문의하기 버튼이 바로 푸터를 만나는 순간이 될거예요
+     */
      $(window).on('scroll',function(){
         clearTimeout(timer);
         timer=setTimeout(function(){
             var scrollY=$(this).scrollTop();
-            var scrollBtm=scrollY+$(this).height();
-            if(scrollY>=4685) {$('.md_open').stop().animate({bottom:200});}
+            var scrollBtm=$(document).height() - $(this).height() - $('.footer').outerHeight();
+            if(scrollY>=scrollBtm) {$('.md_open').stop().animate({bottom:200});}
             else{$('.md_open').stop().animate({bottom:70});}    
         },50);
-      });
+     });
 
      //family site
      var _familyList=$('.foot_right .family>ul');
