@@ -57,7 +57,7 @@ $(document).ready(function(){
       });
     } else{
       var mswiper2=new Swiper('#cnt2 .swiper-container',{
-        slidesPerView:2,
+        slidesPerView:1.5,
         slidesPerGroup: 1,
       });  
     }

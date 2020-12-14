@@ -152,17 +152,17 @@ body {
   z-index: 900;
   background: #fff; }
   .header_wrap::before {
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -o-animation: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -o-animation: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 15px;
+    height: 30px;
     background: url("../images/common/bg_header.svg") repeat-x left bottom; }
 
 .header .logo, .header .teacher {
@@ -659,8 +659,6 @@ body {
 
   .header_wrap {
     height: 12.1359223301vw; }
-    .header_wrap::before {
-      height: 3.640776699vw; }
 
   .header .logo {
     left: 0;

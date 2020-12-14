@@ -296,6 +296,11 @@
     height: 97px;
     top: 142px;
     left: 513px; }
+  #cnt4 > div::after {
+    width: 137px;
+    height: 137px;
+    bottom: 44px;
+    right: 176px; }
   #cnt4 > div span > img {
     position: absolute;
     width: 168px;
