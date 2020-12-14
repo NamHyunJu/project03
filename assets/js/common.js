@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    $(window).on('resize',function(){
+        var winWid=$(this).width();
+        if(winWid>1280) $('body').removeClass('mobile').addClass('pc')
+        else $('body').removeClass('pc').addClass('mobile');
+    });
+    $(window).trigger('resize');
+
     var timer=0;
 
     $('#cnt1').attr({tabIndex:0});
@@ -32,6 +39,20 @@ $(document).ready(function(){
             if ( !$('#pcGnb a').is(':focus') ) _pcGnb.trigger('mouseleave');
         }, 10);
     });
+
+    //mGnb
+    var _mGnb=$('#mGnb>ul');
+    var _dep2a=$('#mGnb .dep2>li a');
+    _mGnb.find('>li >ul').hide();
+    _mGnb.find('>li>a').on('click focus',function(){
+        _mGnb.find('>li.on').removeClass('on').children('ul').hide();
+        if(!_dep2a.next().hasClass('dep3')) { //dep3가 없다면
+            $(this).next().stop().slideDown('fast').parent().addClass('on');
+        } else{//dep3가 있다면
+            
+        }
+    });
+
     //tab
     $('.tab:first-of-type,.tabpanel:first-of-type').show().addClass('on').attr('tabIndex',0);
     $('.tab').eq(0).attr('aria-selected',true).siblings().attr('aria-selected',false);
