@@ -247,23 +247,50 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 }
 
 //Laptop
-@media screen and (max-width:1439px){
-    .max1440{max-width: 1281px;}
-    .header{
-        .logo{left: 0;}
-        .teacher{right: 0;}
-        .inquiry{right: 50px;}
+@media screen and (max-width:1440px){
+    .header_wrap{
+        &::before{height: vw1440(30);}
     }
+    .header{
+        .logo{ left: vw1440(15);width: vw1440(236);height: vw1440(26);}
+        .teacher{right: vw1440(15);width: vw1440(179);height: vw1440(50);font-size: vw1440(20);}
+        .inquiry{bottom: vw1440(50);right: vw1440(50);width: vw1440(80);height: vw1440(80);font-size: vw1440(22);}
+    }
+    #pcHeader{height: 80px;}
+    #pcGnb{
+        >ul{
+            width: vw1440(700);padding-top: vw1440(30);
+            >li{
+                &+li{margin-left: vw1440(88);}
+                >a{font-size: vw1440(18);height: vw1440(50);}
+            }
+        }
+        .dep2{
+            top: vw1440(80);
+            >li{
+                margin-top: vw1440(35);padding-bottom: vw1440(20);
+                &+li{margin-left: vw1440(95);}
+            }
+        }
+        > ul > li:nth-child(3).on .dep2::before, > ul > li:nth-child(4).on .dep2::before{top: vw1440(155);padding-top: vw1440(75);}
+        .dep3{
+            width: calc(100% + vw1440(20));padding-top: vw1440(20);
+            >li {
+                a{margin-top: vw1440(20);}
+            }
+        }
+        > ul > li:nth-child(4) .dep3{padding-bottom: vw1440(40);}
+    }
+
     #cnt6{
         .footer{
-            height: 410px;margin-top: 32px;
-            span{
-                &+span{margin-left: 25px;}
-            }
+            height: per1440(460);margin-top: 60px;
+            span{&+span{margin-left: 40px;}}
             .foot_top{
-                height: 115px;padding: 130px 0 0 15px;
+                height: per1440(115);padding: 130px 0 0 15px; 
                 >p{margin-bottom: 20px;}
-                strong{font-size: 40px;}
+                p{font-size: per1440(16);}
+                strong{font-size: per1440(40);}
                 .txt{
                     margin-left: 32px;
                     p+p{margin-top: 8px;}
@@ -271,38 +298,39 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
             }
             .foot_btm{padding-left: 15px;}
             .foot_left{
-                font-size: 14px;width: 800px;margin-top: 30px;
+                font-size: per1440(14);width: per1440(800);margin-top: 30px;
                 .first{
                     .privacy{margin-left: 40px;}
                 }
                 .mid{margin: 14px 0 24px;}
             }
             .foot_right{
-                bottom: perWid1920(80);right: 10px;width: 298px;
+                bottom: per1440(80);right: 0;width: per1440(298);
                 .family{
                     padding-right: 25px;
-                    .f_select{font-size: 18px;height: 48px;line-height: 50px;}
+                    .f_select{font-size: per1440(18);height: per1440(48);line-height: 1.041;}
                     .f_select{
-                        width: 179px;padding-right: 25px;
-                        &::after{ right: 15px;width: 16px;height: 9.1px;}
+                        width: per1440(179);padding-right: 25px;
+                        &::after{right: per1440(15);width: per1440(16);height: per1440(9.1);}
                     }
                     >ul{
-                        width: 850px;height: 375px;right: 0;bottom: 150px;
+                        width: per1440(850);height: per1440(375);right: 0;bottom: per1440(150);
                         >li{
-                            height: 50px;line-height: 50px;
+                            height: per1440(50);line-height: per1440(50);font-size: per1440(16);
                             &:first-child{
-                                @include radius(10px 0 0 0);
-                                ul{@include radius(0 0 0 10px);}
+                                @include radius(per1440(10) 0 0 0);
+                                ul{@include radius(0 0 0 per1440(10));}
                             }
                             &:last-child{
-                                @include radius(0 10px 0 0);
-                                ul{@include radius(0 0 10px 0);}
+                                @include radius(0 per1440(10) 0 0);
+                                ul{@include radius(0 0 per1440(10) 0);}
                             }
+                            &::after{width: per1440(1);}
                         }
                         >li ul{
-                            height: 325px;padding-top: 20px;
+                            height: per1440(325);padding-top: 20px;
                             li{
-                                font-size: 13px;height: 13px;line-height: 13px;padding-bottom: 25px;
+                                font-size: per1440(13);height: per1440(13);line-height: per1440(13);padding-bottom: 25px;
                             }
                         }
                     }
@@ -311,16 +339,16 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
                     margin-top: 23px;
                     li{
                         margin-left: 25px;
-                        img{width: 44px;height: 44px;}
+                        img{width: per1440(44);height: per1440(44);}
                     }
                 }
             }
         }
-    }    
+    }
 }
 
 //Mobile&tablet
-@media screen and (max-width:1280px){
+@media screen and (max-width:1023px){
     //px->vw
     .max1440{max-width: vw412(392);}
     body{font-size: vw412(16);}
@@ -337,7 +365,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
         }
         .teacher{right: 0;width: vw412(109);height: vw412(30);font-size: vw412(12);}
         .inquiry{
-            bottom: vw412(70);right: vw412(18);width: vw412(50);height: vw412(50);font-size: vw412(13);
+            bottom: vw412(70);right: vw412(90);width: vw412(50);height: vw412(50);font-size: vw412(13);
         }
     }
     #pcHeader{display: none;}
@@ -348,7 +376,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
         @include bgsize(cover);
         right: 0;top: 50%;width: vw412(23);height: vw412(23);background: url("../images/icon/nav.svg") no-repeat center;
     }
-    #mGnb{
+    #mGnb{display: none;
         position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: $orange;opacity: 0.95;z-index: 1000;overflow-y: auto;
         a{display: inline-block;}
         >ul{

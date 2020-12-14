@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $(window).on('resize',function(){
         var winWid=$(this).width();
-        if(winWid>1280) $('body').removeClass('mobile').addClass('pc')
+        if(winWid>1023) $('body').removeClass('mobile').addClass('pc')
         else $('body').removeClass('pc').addClass('mobile');
     });
     $(window).trigger('resize');

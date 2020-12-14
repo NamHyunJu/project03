@@ -10,20 +10,11 @@
     $perSize:$px*100/960;
     @return #{$perSize+'%'};
 }
-@function perWid1439($px){
-    $perSize:$px*100/1439;
-    @return #{$perSize+'%'};
+@function vw1440($px){
+    $vwSize:$px*100/1440;
+    @return #{$vwSize}vw;
 }
-@function perHei891($px){
-    $perSize:$px*100/891;
-    @return #{$perSize+'%'};
-}
-
 @function vw412($px){
     $vwSize:$px*100/412;
     @return #{$vwSize}vw;
-}
-@function per412($px){
-    $vwSize:$px*100/412;
-    @return #{$perSize+'%'};
 }

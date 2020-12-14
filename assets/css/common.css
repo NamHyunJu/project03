@@ -556,29 +556,69 @@ body {
     top: -12px;
     right: -6px; }
 
-@media screen and (max-width: 1439px) {
-  .max1440 {
-    max-width: 1281px; }
+@media screen and (max-width: 1440px) {
+  .header_wrap::before {
+    height: 2.0833333333vw; }
 
   .header .logo {
-    left: 0; }
+    left: 1.0416666667vw;
+    width: 16.3888888889vw;
+    height: 1.8055555556vw; }
   .header .teacher {
-    right: 0; }
+    right: 1.0416666667vw;
+    width: 12.4305555556vw;
+    height: 3.4722222222vw;
+    font-size: 1.3888888889vw; }
   .header .inquiry {
-    right: 50px; }
+    bottom: 3.4722222222vw;
+    right: 3.4722222222vw;
+    width: 5.5555555556vw;
+    height: 5.5555555556vw;
+    font-size: 1.5277777778vw; }
+
+  #pcHeader {
+    height: 80px; }
+
+  #pcGnb > ul {
+    width: 48.6111111111vw;
+    padding-top: 2.0833333333vw; }
+    #pcGnb > ul > li + li {
+      margin-left: 6.1111111111vw; }
+    #pcGnb > ul > li > a {
+      font-size: 1.25vw;
+      height: 3.4722222222vw; }
+  #pcGnb .dep2 {
+    top: 5.5555555556vw; }
+    #pcGnb .dep2 > li {
+      margin-top: 2.4305555556vw;
+      padding-bottom: 1.3888888889vw; }
+      #pcGnb .dep2 > li + li {
+        margin-left: 6.5972222222vw; }
+  #pcGnb > ul > li:nth-child(3).on .dep2::before, #pcGnb > ul > li:nth-child(4).on .dep2::before {
+    top: 10.7638888889vw;
+    padding-top: 5.2083333333vw; }
+  #pcGnb .dep3 {
+    width: calc(100% + vw1440(20));
+    padding-top: 1.3888888889vw; }
+    #pcGnb .dep3 > li a {
+      margin-top: 1.3888888889vw; }
+  #pcGnb > ul > li:nth-child(4) .dep3 {
+    padding-bottom: 2.7777777778vw; }
 
   #cnt6 .footer {
-    height: 410px;
-    margin-top: 32px; }
+    height: per1440(460);
+    margin-top: 60px; }
     #cnt6 .footer span + span {
-      margin-left: 25px; }
+      margin-left: 40px; }
     #cnt6 .footer .foot_top {
-      height: 115px;
+      height: per1440(115);
       padding: 130px 0 0 15px; }
       #cnt6 .footer .foot_top > p {
         margin-bottom: 20px; }
+      #cnt6 .footer .foot_top p {
+        font-size: per1440(16); }
       #cnt6 .footer .foot_top strong {
-        font-size: 40px; }
+        font-size: per1440(40); }
       #cnt6 .footer .foot_top .txt {
         margin-left: 32px; }
         #cnt6 .footer .foot_top .txt p + p {
@@ -586,70 +626,73 @@ body {
     #cnt6 .footer .foot_btm {
       padding-left: 15px; }
     #cnt6 .footer .foot_left {
-      font-size: 14px;
-      width: 800px;
+      font-size: per1440(14);
+      width: per1440(800);
       margin-top: 30px; }
       #cnt6 .footer .foot_left .first .privacy {
         margin-left: 40px; }
       #cnt6 .footer .foot_left .mid {
         margin: 14px 0 24px; }
     #cnt6 .footer .foot_right {
-      bottom: 4.1666666667%;
-      right: 10px;
-      width: 298px; }
+      bottom: per1440(80);
+      right: 0;
+      width: per1440(298); }
       #cnt6 .footer .foot_right .family {
         padding-right: 25px; }
         #cnt6 .footer .foot_right .family .f_select {
-          font-size: 18px;
-          height: 48px;
-          line-height: 50px; }
+          font-size: per1440(18);
+          height: per1440(48);
+          line-height: 1.041; }
         #cnt6 .footer .foot_right .family .f_select {
-          width: 179px;
+          width: per1440(179);
           padding-right: 25px; }
           #cnt6 .footer .foot_right .family .f_select::after {
-            right: 15px;
-            width: 16px;
-            height: 9.1px; }
+            right: per1440(15);
+            width: per1440(16);
+            height: per1440(9.1); }
         #cnt6 .footer .foot_right .family > ul {
-          width: 850px;
-          height: 375px;
+          width: per1440(850);
+          height: per1440(375);
           right: 0;
-          bottom: 150px; }
+          bottom: per1440(150); }
           #cnt6 .footer .foot_right .family > ul > li {
-            height: 50px;
-            line-height: 50px; }
+            height: per1440(50);
+            line-height: per1440(50);
+            font-size: per1440(16); }
             #cnt6 .footer .foot_right .family > ul > li:first-child {
-              -webkit-border-radius: 10px 0 0 0;
-              -moz-border-radius: 10px 0 0 0;
-              border-radius: 10px 0 0 0; }
+              -webkit-border-radius: per1440(10) 0 0 0;
+              -moz-border-radius: per1440(10) 0 0 0;
+              border-radius: per1440(10) 0 0 0; }
               #cnt6 .footer .foot_right .family > ul > li:first-child ul {
-                -webkit-border-radius: 0 0 0 10px;
-                -moz-border-radius: 0 0 0 10px;
-                border-radius: 0 0 0 10px; }
+                -webkit-border-radius: 0 0 0 per1440(10);
+                -moz-border-radius: 0 0 0 per1440(10);
+                border-radius: 0 0 0 per1440(10); }
             #cnt6 .footer .foot_right .family > ul > li:last-child {
-              -webkit-border-radius: 0 10px 0 0;
-              -moz-border-radius: 0 10px 0 0;
-              border-radius: 0 10px 0 0; }
+              -webkit-border-radius: 0 per1440(10) 0 0;
+              -moz-border-radius: 0 per1440(10) 0 0;
+              border-radius: 0 per1440(10) 0 0; }
               #cnt6 .footer .foot_right .family > ul > li:last-child ul {
-                -webkit-border-radius: 0 0 10px 0;
-                -moz-border-radius: 0 0 10px 0;
-                border-radius: 0 0 10px 0; }
+                -webkit-border-radius: 0 0 per1440(10) 0;
+                -moz-border-radius: 0 0 per1440(10) 0;
+                border-radius: 0 0 per1440(10) 0; }
+            #cnt6 .footer .foot_right .family > ul > li::after {
+              width: per1440(1); }
           #cnt6 .footer .foot_right .family > ul > li ul {
-            height: 325px;
+            height: per1440(325);
             padding-top: 20px; }
             #cnt6 .footer .foot_right .family > ul > li ul li {
-              font-size: 13px;
-              height: 13px;
-              line-height: 13px;
+              font-size: per1440(13);
+              height: per1440(13);
+              line-height: per1440(13);
               padding-bottom: 25px; }
       #cnt6 .footer .foot_right .sns {
         margin-top: 23px; }
         #cnt6 .footer .foot_right .sns li {
           margin-left: 25px; }
           #cnt6 .footer .foot_right .sns li img {
-            width: 44px;
-            height: 44px; } }
-@media screen and (max-width: 1280px) {
+            width: per1440(44);
+            height: per1440(44); } }
+@media screen and (max-width: 1023px) {
   .max1440 {
     max-width: 95.145631068vw; }
 
@@ -680,7 +723,7 @@ body {
     font-size: 2.9126213592vw; }
   .header .inquiry {
     bottom: 16.9902912621vw;
-    right: 4.3689320388vw;
+    right: 21.8446601942vw;
     width: 12.1359223301vw;
     height: 12.1359223301vw;
     font-size: 3.1553398058vw; }
@@ -711,6 +754,7 @@ body {
     background: url("../images/icon/nav.svg") no-repeat center; }
 
   #mGnb {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
