@@ -14,7 +14,7 @@
     
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/fullpage.min.js"></script>
-    <script type="text/javascript" src="assets/js/scrolloverflow.min.js"></script>
+    <script src="assets/js/scrolloverflow.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/fullpage.js"></script>
     <script src="assets/js/common.js"></script>
@@ -23,7 +23,7 @@
 <body>
     <div id="skip"><a href="#cnt1">본문 바로가기</a></div>
     <div id="wrap">
-        <div class="header_wrap">
+        <div class="header_wrap" id="pcHeader_wrap">
             <header class="header max1440 p_r" id="pcHeader">
                 <h1 class="logo"><a href="index.html"><img src="assets/images/icon/logo.png" alt="재능교육"></a></h1>
                 <nav id="pcGnb">
@@ -121,25 +121,25 @@
                 <button class="inquiry md_open" type="button" aria-haspopup="dialog" title="대화상자" data-targetmodal="#modalCnt">문의<br>하기</button>
             </header>
         </div>
-        <div class="header_wrap">
+        <div class="header_wrap" id="mHeader_wrap">
             <header class="header" id="mHeader">
-                <h1 class="logo"><a href="assets/images/icon/logo.png" srcset=""><span class="blind-b">재능교육</span></a></h1>
+                <h1 class="logo"><a href="assets/images/icon/logo.png"><span class="blind-b">재능교육</span></a></h1>
                 <button type="button" class="mGnb_open" title="네비게이션 열기 버튼"></button>
                 <nav id="mGnb">
                     <ul>
                         <li>
-                            <a href="">스스로 이야기</a>
+                            <a href="" class="first">스스로 이야기</a>
                             <ul class="dep2">
-                                <li><a href="">학습시스템 이야기</a></li>
-                                <li><a href="">학습출발점 이야기</a></li>
+                                <li><a href="" class="go">학습시스템 이야기</a></li>
+                                <li><a href="" class="go">학습출발점 이야기</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="">스스로의 힘</a>
                             <ul class="dep2">
-                                <li><a href="">회원 변화 이야기</a></li>
-                                <li><a href="">회원 성공 이야기</a></li>
-                                <li><a href="">맘대로키워라(웹진)</a></li>
+                                <li><a href="" class="go">회원 변화 이야기</a></li>
+                                <li><a href="" class="go">회원 성공 이야기</a></li>
+                                <li><a href="" class="go">맘대로키워라(웹진)</a></li>
                             </ul>
                         </li>
                         <li>
@@ -215,9 +215,10 @@
                             </ul>
                         </li>
                     </ul>
+                    <button type="button" class="last mGnb_close"></button>
                 </nav>
                 <button class="teacher round gradient more" type="button">재능선생님 모집</button>
-                <button class="inquiry" type="button" aria-haspopup="dialog" title="대화상자" data-targetmodal="#modalCnt"><span>문의하기</span></button>
+                <button class="inquiry md_open" type="button" aria-haspopup="dialog" title="대화상자" data-targetmodal="#modalCnt"><span>문의<br>하기</span></button>
             </header>
         </div>
 
@@ -355,7 +356,7 @@
                             <img src="assets/images/main/event01.PNG" alt="">
                             <div class="txt">
                                 <p class="benefit more round">혜택</p>
-                                <strong class="sub_tit">2020 봄 재능회원 &lt서울랜드&gt 특별 할인</strong>
+                                <strong class="sub_tit">2020 봄 재능회원 &lt;서울랜드&gt; 특별 할인</strong>
                                 <p class="date">2020.03.26 ~ 2020.07.01</p>
                                 <button class="round more white" type="button">자세히 보기</button>
                             </div>
@@ -364,7 +365,7 @@
                             <img src="assets/images/main/event02.PNG" alt="">
                             <div class="txt">
                                 <p class="event more round">이벤트</p>
-                                <strong class="sub_tit">2020 봄 재능회원 &lt서울랜드&gt 특별 할인</strong>
+                                <strong class="sub_tit">2020 봄 재능회원 &lt;서울랜드&gt; 특별 할인</strong>
                                 <p class="date">2020.03.26 ~ 2020.07.01</p>
                                 <button class="round more white" type="button">자세히 보기</button>
                             </div>
@@ -373,7 +374,7 @@
                             <img src="assets/images/main/event03.PNG" alt="">
                             <div class="txt">
                                 <p class="benefit more round">혜택</p>
-                                <strong class="sub_tit">2020 가을 재능회원 &lt서울랜드&gt 특별 할인</strong>
+                                <strong class="sub_tit">2020 가을 재능회원 &lt;서울랜드&gt; 특별 할인</strong>
                                 <p class="date">2020.09.05 ~ 2020.11.30</p>
                                 <button class="round more white" type="button">자세히 보기</button>
                             </div>
@@ -382,7 +383,7 @@
                             <img src="assets/images/main/event04.PNG" alt="">
                             <div class="txt">
                                 <p class="event more round">이벤트</p>
-                                <strong class="sub_tit">2020 봄 재능회원 &lt서울랜드&gt 특별 할인</strong>
+                                <strong class="sub_tit">2020 봄 재능회원 &lt;서울랜드&gt; 특별 할인</strong>
                                 <p class="date">2020.03.26 ~ 2020.07.01</p>
                                 <button class="round more white" type="button">자세히 보기</button>
                             </div>
@@ -611,7 +612,7 @@
     </div>
     <div id="modalCnt" class="modal_cnt" role="dialog" aria-modal="true" aria-labelledby="inquiryTit">
         <h3 id="inquiryTit">무료 상담 신청</h3>
-        <form action="" method="" id="apply">
+        <form method="get" id="apply">
             <label for="name" class="sub_tit">자녀 이름</label>
             <input type="text" id="name" class="first" name="name">
             <br>
@@ -665,9 +666,9 @@
                 </p>
             </div>
             <input type="checkbox" name="agree" id="agree"><label for="agree" class="agree_txt ntsans">개인정보수집 및 이용에 동의합니다.</label>
+            <button type="submit" class="more round gradient">신청하기</button>
+            <button type="button" class="last md_close" title="취소하기"><img src="assets/images/icon/close_btn.svg" alt="취소하기"></button>    
         </form>
-        <button type="submit" class="more round gradient">신청하기</button>
-        <button type="button" class="last md_close" title="취소하기"><img src="assets/images/icon/close_btn.svg" alt="취소하기"></button>
     </div>
 </body>
 </html>

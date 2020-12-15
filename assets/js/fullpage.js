@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    //태블릿 1280부터 fullpage 호출
+    //1024부터 fullpage 호출
     var timer=0;
     $(window).on('resize',function(){
         clearTimeout(timer);
         timer=setTimeout(function(){
-            if($(window).width()>=1280) creatFullpage();
+            if($(window).width()>=1024) creatFullpage();
             else fullpage_api.destroy('all'); 
         },50);
     });
@@ -14,6 +14,7 @@ $(document).ready(function(){
             autoScrolling:true,
             scrollBar: true,
             scrollOverflow : true , 
+            //keyboardScrolling: false,
             navigation: true,
             navigationTooltips: ['재능교육의 가치관', '추천 상품', '연령별 상품 소개', '이벤트 및 혜택', '자주찾는 질문', '모바일 앱 다운']
         });    

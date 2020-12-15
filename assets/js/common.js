@@ -41,15 +41,49 @@ $(document).ready(function(){
     });
 
     //mGnb
-    var _mGnb=$('#mGnb>ul');
-    var _dep2a=$('#mGnb .dep2>li a');
-    _mGnb.find('>li >ul').hide();
-    _mGnb.find('>li>a').on('click focus',function(){
-        _mGnb.find('>li.on').removeClass('on').children('ul').hide();
-        if(!_dep2a.next().hasClass('dep3')) { //dep3가 없다면
+    var _mGnb=$('#mHeader #mGnb');
+    $('#mHeader .mGnb_open').on('click',function(){
+        var _first=_mGnb.find('.first');
+        var _last=_mGnb.find('.last');
+        var _openBtn=$(this);
+
+        _mGnb.css('display','block').stop().animate({left:0},300,function(){
+            _first.focus();
+
+            _first.on('keydown',function(e){
+                if(e.shiftKey && e.keyCode===9) {
+                    e.preventDefault();
+                    _last.focus();
+                }
+            });
+            _last.on('keydown',function(e){
+                if(!e.shiftKey&&e.keyCode===9){
+                    e.preventDefault();
+                    _first.focus();
+                }
+            });
+        });
+        _last.on('click',function(){
+            _mGnb.stop().animate({left:'-100%'},300,function(){
+                $(this).hide().find('ul li.on').removeClass('on').parents('#mGnb').perv().focus();
+            });
+        });
+    });
+
+    var _mGnbUl=$('#mGnb>ul');
+    _mGnbUl.find('.dep2,.dep3').hide();
+    _mGnbUl.find('>li>a,.dep2>li>a:not(.go)').on('click',function(e){
+        e.preventDefault();
+        if(!$(this).parent().hasClass('on')){//닫혀있으면 열기
+            if($(this).next().hasClass('dep2')){
+                _mGnbUl.find('>li.on').removeClass('on').find('ul').stop().slideUp('fast');
+                _mGnbUl.find('.dep2>li.on').removeClass('on').find('ul').stop().slideUp('fast');
+            } else{
+                _mGnbUl.find('.dep2>li.on').removeClass('on').find('ul').stop().slideUp('fast');
+            }
             $(this).next().stop().slideDown('fast').parent().addClass('on');
-        } else{//dep3가 있다면
-            
+        } else {//열려있으면 닫기
+            $(this).next().stop().slideUp('fast').parent().removeClass('on');
         }
     });
 

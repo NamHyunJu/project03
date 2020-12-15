@@ -92,9 +92,13 @@
       font-size: 50px; }
 #cnt1 .controller {
   position: absolute;
-  bottom: 120px;
+  top: 800px;
   left: 255px;
-  z-index: 500; }
+  z-index: 500;
+  font-size: 0; }
+  #cnt1 .controller > * {
+    display: inline-block;
+    vertical-align: middle; }
   #cnt1 .controller::before {
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
@@ -116,7 +120,6 @@
   #cnt1 .controller .swiper-pagination, #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next, #cnt1 .controller .play_stop {
     float: left; }
   #cnt1 .controller .swiper-pagination {
-    display: inline-block;
     font-size: 30px;
     text-align: left;
     margin-left: 20px;
@@ -255,30 +258,30 @@
       font-size: 50px; }
     #cnt3 .txt p {
       font-size: 25px;
-      margin-top: 6.6666666667%; }
+      margin-top: 64px; }
   #cnt3 .baby {
-    top: -7.2916666667%;
-    left: -3.59375%;
+    top: -140px;
+    left: -69px;
     background-position: right bottom;
     background-image: url("../images/main/bg_orange.svg");
-    width: 51.5104166667%;
-    height: 95.4166666667%; }
+    width: 989px;
+    height: 916px; }
     #cnt3 .baby .txt {
       color: #ffffff;
       text-align: right;
-      top: 43.125%;
-      right: 5.2083333333%; }
+      top: 414px;
+      right: 100px; }
   #cnt3 .ele {
-    top: 20.8333333333%;
-    right: -3.59375%;
+    top: 200px;
+    right: -69px;
     background-position: left top;
     background-image: url("../images/main/bg_mint.svg");
-    width: 53.1770833333%;
-    height: 96.5625%; }
+    width: 1021px;
+    height: 927px; }
     #cnt3 .ele .txt {
       text-align: left;
-      top: 39.2708333333%;
-      left: 6.25%; }
+      top: 377px;
+      left: 120px; }
       #cnt3 .ele .txt p {
         color: #444444; }
 
@@ -504,15 +507,14 @@
     margin-top: 80px; }
     #cnt6 .app_down strong span {
       display: block;
-      font-size: 30px;
-      margin-top: 20px; }
+      font-size: 30px; }
 
 @media screen and (max-width: 1440px) {
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide img {
     width: 80.8333333333vw;
     height: 64.1666666667vw; }
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt {
-    top: 13.8888888889vw;
+    top: 20.1388888889vw;
     left: 4.1666666667vw; }
     #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt p {
       font-size: 2.0833333333vw; }
@@ -520,7 +522,7 @@
     font-size: 3.4722222222vw;
     margin-bottom: 3.0555555556vw; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 .txt {
-    top: 10.4166666667vw; }
+    top: 17.3611111111vw; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 p:nth-child(1) {
     font-size: 3.4722222222vw;
     margin-bottom: 3.0555555556vw; }
@@ -531,7 +533,7 @@
     #cnt1 .swiper-container .swiper-wrapper .slide3 p:nth-child(2) span {
       font-size: 3.4722222222vw; }
   #cnt1 .controller {
-    bottom: 4.5138888889vw;
+    top: 55.5555555556vw;
     left: 4.1666666667vw; }
     #cnt1 .controller::before {
       -webkit-border-radius: 1.25vw;
@@ -549,7 +551,7 @@
       width: 4.8611111111vw;
       height: 4.8611111111vw; }
     #cnt1 .controller .swiper-button-next {
-      margin-left: 20px; }
+      margin-left: 1.3888888889vw; }
     #cnt1 .controller .play {
       margin-left: 3.9583333333vw; }
     #cnt1 .controller .stop {
@@ -722,8 +724,7 @@
       font-size: 3.4722222222vw;
       margin-top: 5.5555555556vw; }
       #cnt6 .app_down strong span {
-        font-size: 2.0833333333vw;
-        margin-top: 1.3888888889vw; } }
+        font-size: 2.0833333333vw; } }
 @media screen and (max-width: 1023px) {
   .tit {
     font-size: 7.2815533981vw;
@@ -753,7 +754,7 @@
   #cnt1 .swiper-container .swiper-wrapper .slide2 .txt {
     top: 58.2524271845vw !important; }
   #cnt1 .controller {
-    bottom: 49.7572815534vw;
+    top: 152.9126213592vw;
     left: 9.7087378641vw; }
     #cnt1 .controller::before {
       -webkit-border-radius: 4.3689320388vw;
@@ -764,7 +765,7 @@
       height: 4.1262135922vw; }
     #cnt1 .controller .swiper-pagination {
       font-size: 3.3980582524vw;
-      margin-left: 15px; }
+      margin-left: 3.640776699vw; }
       #cnt1 .controller .swiper-pagination .swiper-pagination-current {
         font-size: 4.854368932vw; }
     #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next, #cnt1 .controller .play_stop {
@@ -809,8 +810,10 @@
     #cnt2 .txt strong {
       margin: 3.3980582524vw 0;
       font-size: 3.8834951456vw; }
+    #cnt2 .txt p, #cnt2 .txt ul li {
+      font-size: 3.1553398058vw; }
     #cnt2 .txt ul li {
-      padding-left: 102px; }
+      padding-left: 9.7087378641vw; }
       #cnt2 .txt ul li::before {
         left: 7.7669902913vw;
         width: 1.6990291262vw;

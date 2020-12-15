@@ -35,7 +35,7 @@ $(document).ready(function(){
     });
 
     //본문2 swiper
-    if($(window).width()>1280){
+    if($(window).width()>1023){
         var swiper2 = new Swiper('#cnt2 .swiper-container', {
         slidesPerView: 2,
         slidesPerGroup: 2,
