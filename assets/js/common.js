@@ -9,18 +9,6 @@ $(document).ready(function(){
     var timer=0;
 
     $('#cnt1').attr({tabIndex:0});
-
-/*     $(window).on('scroll',function(){
-        clearTimeout(timer);
-        timer=setTimeout(function(){
-            var scrollY=$(this).scrollTop();
-            $('.fade').each(function(){
-                if(scrollY>$(this).offset().top-600) $(this).addClass('on');
-            });
-        },50);
-    });
-    $(window).trigger('scroll'); */
-
     
     //pcGnb
     var _pcGnb = $('#pcGnb > ul');
@@ -130,7 +118,7 @@ $(document).ready(function(){
      _acco.find('.first').attr({'aria-expanded':true}).addClass('active').parent().next().show();
 
      _acco.find('.accoheader').on('click',function(){
-             $(this).attr({'aria-expanded':true,'aria-disabled':true}).parent().addClass('active').siblings('h3.active').removeClass('active').children().attr({'aria-expanded':false});
+             $(this).attr({'aria-expanded':true,'aria-disabled':true}).parent().addClass('active').siblings('h3.active').removeClass('active').children().attr({'aria-expanded':false,'aria-disabled':false});
 
              $(this).parent().next().attr({tabIndex:0}).stop().slideDown('fast').siblings('.accopanel').attr({tabIndex:-1}).stop().slideUp('fast');
      });
@@ -195,17 +183,18 @@ $(document).ready(function(){
      });
 
      //스크롤바가 제일 하단이면 문의하기 버튼 이동
-     /* 
-        $(document).height() - $(this).height()은 스크롤바를 문서의 가장 하단까지 내렸을때를 의미함
-        스크롤을 가장 하단으로 내렸을때 보다 푸터의 높이만큼을 빼주면 문의하기 버튼이 바로 푸터를 만나는 순간이 될거예요
-     */
      $(window).on('scroll',function(){
         clearTimeout(timer);
         timer=setTimeout(function(){
             var scrollY=$(this).scrollTop();
             var scrollBtm=$(document).height() - $(this).height() - $('.footer').outerHeight();
             if(scrollY>=scrollBtm) {$('.md_open').stop().animate({bottom:200});}
-            else{$('.md_open').stop().animate({bottom:70});}    
+            else{$('.md_open').stop().animate({bottom:70});} 
+
+            //fade
+            $('.fade').each(function(){
+                if(scrollY>$(this).offset().top-650) $(this).addClass('on');
+            });
         },50);
      });
 

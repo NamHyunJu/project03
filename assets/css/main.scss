@@ -270,7 +270,7 @@
                 .swiper-slide{
                     img{width:vw1440(1164);height: vw1440(924);}
                     .txt{
-                        top: vw1440(290);left: vw1440(60);
+                        top: vh891(290);left: vw1440(60);
                         p{font-size: vw1440(30);}
                     }
                 }
@@ -280,7 +280,7 @@
                     }
                 }
                 .slide2{
-                    .txt{top: vw1440(250);}
+                    .txt{top: vh891(250);}
                     p:nth-child(1){font-size: vw1440(50);margin-bottom: vw1440(44);}
                     p:nth-child(3){margin-top: vw1440(50);}
                 }
@@ -293,7 +293,7 @@
             }
         }
         .controller{
-            top: vw1440(800);left: vw1440(60);
+            top: vh891(800);left: vw1440(60);
             &::before{
                 @include radius(vw1440(18));
                right: vw1440(35);width: vw1440(100);height: vw1440(36);
@@ -376,7 +376,7 @@
                 img{height: vw1440(250);}
                 .txt{
                     padding: vw1440(20);height: vw1440(250);
-                    .event,.benefit{width: vw1440(76);height: vw1440(29);line-height: vw1440(29);margin-bottom: vw1440(20);}
+                    .event,.benefit{width: vw1440(76);height: vw1440(29);line-height: vw1440(29);margin-bottom: vw1440(20);font-size: vw1440(16);}
                     strong{font-size: vw1440(18);line-height: 1.277;padding-bottom: vw1440(40);}
                     .date{
                         font-size: vw1440(15);line-height: 1.266;margin-bottom: vw1440(20);
@@ -439,17 +439,17 @@
                 &:nth-child(1) strong,&:nth-child(2) p:nth-child(1),span{font-size: vw412(30);}
                 strong,&:nth-child(2) p:nth-child(1){margin-bottom: 30px;}
                 .txt{
-                    top: vw412(240);left: vw412(17);
+                    top: vh869(240);left: vw412(17);background: rgba(255,255,255,0.4);
                     p{font-size: vw412(16);}
                 }
             }
             .slide2 p:nth-child(3),.slide3 p:nth-child(2){margin-top: vw412(30);}
             .slide2{
-                .txt{top: vw412(240) !important;}
+                .txt{top: vh869(240) !important;}
             }
         }
         .controller{
-            top: vw412(630);left: vw412(40);
+            top: vh869(630);left: vw412(40);
             &::before{
                 @include radius(vw412(18));
                 right: vw412(16);width: vw412(46);height: vw412(17);

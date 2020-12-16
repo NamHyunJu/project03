@@ -514,7 +514,7 @@
     width: 80.8333333333vw;
     height: 64.1666666667vw; }
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt {
-    top: 20.1388888889vw;
+    top: 32.5476992144vh;
     left: 4.1666666667vw; }
     #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt p {
       font-size: 2.0833333333vw; }
@@ -522,7 +522,7 @@
     font-size: 3.4722222222vw;
     margin-bottom: 3.0555555556vw; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 .txt {
-    top: 17.3611111111vw; }
+    top: 28.0583613917vh; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 p:nth-child(1) {
     font-size: 3.4722222222vw;
     margin-bottom: 3.0555555556vw; }
@@ -533,7 +533,7 @@
     #cnt1 .swiper-container .swiper-wrapper .slide3 p:nth-child(2) span {
       font-size: 3.4722222222vw; }
   #cnt1 .controller {
-    top: 55.5555555556vw;
+    top: 89.7867564534vh;
     left: 4.1666666667vw; }
     #cnt1 .controller::before {
       -webkit-border-radius: 1.25vw;
@@ -659,7 +659,8 @@
           width: 5.2777777778vw;
           height: 2.0138888889vw;
           line-height: 2.0138888889vw;
-          margin-bottom: 1.3888888889vw; }
+          margin-bottom: 1.3888888889vw;
+          font-size: 1.1111111111vw; }
         #cnt4 ul li .txt strong {
           font-size: 1.25vw;
           line-height: 1.277;
@@ -745,16 +746,17 @@
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide strong, #cnt1 .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) p:nth-child(1) {
     margin-bottom: 30px; }
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt {
-    top: 58.2524271845vw;
-    left: 4.1262135922vw; }
+    top: 27.6179516686vh;
+    left: 4.1262135922vw;
+    background: rgba(255, 255, 255, 0.4); }
     #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt p {
       font-size: 3.8834951456vw; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 p:nth-child(3), #cnt1 .swiper-container .swiper-wrapper .slide3 p:nth-child(2) {
     margin-top: 7.2815533981vw; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 .txt {
-    top: 58.2524271845vw !important; }
+    top: 27.6179516686vh !important; }
   #cnt1 .controller {
-    top: 152.9126213592vw;
+    top: 72.49712313vh;
     left: 9.7087378641vw; }
     #cnt1 .controller::before {
       -webkit-border-radius: 4.3689320388vw;

@@ -33,19 +33,20 @@ header,nav,section,footer{display: block;}
 }
 .gray{background-color: $gray;}
 
-/*.fade{
-    @include transition(all 1s);
+.fade{
+    @include transition(all 0.7s);
     opacity: 0;
     &.up{@include transform(translateY(40px));}
     &.down{@include transform(translateY(-40px));}
     &.right{@include transform(translateX(-40px));}
     &.left{@include transform(translateX(40px));}
 }
+
 .fade.on{
     opacity: 1;
     &.up,&.down{@include transform(translateY(0));}
-    &.left,&.right{@include transform(translateX(0));}
-}*/
+    &.left,&.right{@include transform(translateX(0));@include transition(all 2s);}
+}
 
 body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-size: 16px;line-height: 1.5;word-break: keep-all;letter-spacing: 0.03;}
 
@@ -249,7 +250,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 //Laptop
 @media screen and (max-width:1440px){
     .header_wrap{
-        &::before{height: vw1440(15);}
+        &::before{height: vw1440(15);max-height:17px}
     }
     .header{
         .logo{ left: vw1440(15);width: vw1440(236);height: vw1440(26);}
@@ -287,7 +288,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
             height: vw1440(460);margin-top: 60px;
             span{&+span{margin-left: 40px;}}
             .foot_top{
-                height: vw1440(115);padding: 130px 0 0 15px; 
+                height: vw1440(115);padding: 130px 0 0 15px; border-bottom:none;
                 >p{margin-bottom: 20px;}
                 p{font-size: vw1440(16);}
                 strong{font-size: vw1440(40);}
@@ -298,6 +299,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
             }
             .foot_btm{padding-left: 15px;}
             .foot_left{
+                @include boxsizing;
                 font-size: vw1440(14);width: vw1440(800);margin-top: 30px;
                 .first{
                     .privacy{margin-left: 40px;}
@@ -402,11 +404,11 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 
     .header_wrap{
         height: vw412(50);
-        &::before{height: vw412(15);}
+        &::before{height: vw412(15);max-height: 17px;}
     }
     .header{
         .logo{
-            left: 0;width: vw412(123);height: vw412(14);
+            left: vw412(15);width: vw412(123);height: vw412(14);
             a{display: inline-block;}
         }
         .teacher{right: vw412(90);width: vw412(109);height: vw412(30);font-size: vw412(12);}
@@ -468,7 +470,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
                 &+span{margin-left: vw412(7);}
             }
             .foot_top{
-                width: 100%;height: auto;padding:0;border-bottom:none;padding-top: vw412(49);
+                width: 100%;height: auto;padding:vw412(49) 0 0 15px;
                 >p,.txt p{font-size: vw412(11);}
                 >p{margin-bottom: vw412(5);}
                 strong{font-size: vw412(16);}
@@ -480,9 +482,9 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
                     }
                 }
             }
-            .foot_btm{padding-left: 0;padding-top: vw412(20);}
+            .foot_btm{padding-top: vw412(20);}
             .foot_left{
-                font-size: vw412(11);width: 800px;margin-top: 0;
+                font-size: vw412(11);width: 100%;margin-top: 0;
                 .first{
                     .privacy{margin-left: vw412(7);}
                 }

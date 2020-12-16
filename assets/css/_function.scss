@@ -7,6 +7,14 @@
     $vwSize:$px*100/1440;
     @return #{$vwSize}vw;
 }
+@function vh891($px){
+    $vwSize:$px*100/891;
+    @return #{$vwSize}vh;
+}
+@function vh869($px){
+    $vwSize:$px*100/869;
+    @return #{$vwSize}vh;
+}
 @function vw412($px){
     $vwSize:$px*100/412;
     @return #{$vwSize}vw;
