@@ -103,7 +103,7 @@ header, nav, section, footer {
 .gray {
   background-color: #F3F3F3; }
 
-/* .fade{
+/*.fade{
     @include transition(all 1s);
     opacity: 0;
     &.up{@include transform(translateY(40px));}
@@ -115,7 +115,7 @@ header, nav, section, footer {
     opacity: 1;
     &.up,&.down{@include transform(translateY(0));}
     &.left,&.right{@include transform(translateX(0));}
-} */
+}*/
 body {
   font-family: jalnan,NtSansKR,serif;
   font-weight: 400;

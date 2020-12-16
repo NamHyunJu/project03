@@ -10,8 +10,7 @@ $(document).ready(function(){
 
     $('#cnt1').attr({tabIndex:0});
 
-    fade
-    $(window).on('scroll',function(){
+/*     $(window).on('scroll',function(){
         clearTimeout(timer);
         timer=setTimeout(function(){
             var scrollY=$(this).scrollTop();
@@ -20,7 +19,7 @@ $(document).ready(function(){
             });
         },50);
     });
-    $(window).trigger('scroll');
+    $(window).trigger('scroll'); */
 
     
     //pcGnb
