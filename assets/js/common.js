@@ -7,8 +7,6 @@ $(document).ready(function(){
     $(window).trigger('resize');
 
     var timer=0;
-
-    $('#cnt1').attr({tabIndex:0});
     
     //pcGnb
     var _pcGnb = $('#pcGnb > ul');
@@ -124,14 +122,14 @@ $(document).ready(function(){
      });
      _acco.find('.accoheader').on('keydown',function(e){
         var key=e.keyCode;
-        switch(key) {
+        switch(key) {//아래 위 홈 엔드
             case 40:
                 if($(this).hasClass('last')) {$(this).closest('.accordion').find('.first').focus();}
-                else{$(this).parent().next().next().focus();}
+                else{$(this).parent().next().next().children().focus();}
             break;
             case 38:
                 if($(this).hasClass('first')) {$(this).closest('.accordion').find('.last').focus();}
-                else{$(this).parent().prev().prev().focus();}
+                else{$(this).parent().prev().prev().children().focus();}
             break;
             case 36:
                 e.preventDefault();
@@ -140,6 +138,7 @@ $(document).ready(function(){
             case 35:
                 e.preventDefault();
                 $(this).closest('.accordion').find('.last').focus();
+            break;
         }
      });
 
@@ -174,7 +173,7 @@ $(document).ready(function(){
                 $(this).remove();
             });
             _mdCnt.css('visibility','hidden').siblings().removeAttr('aria-hidden inert');
-            _first.focus();
+            _mdOpen.focus();
         });
         //Esc를 누른경우 닫힌다
         $(window).on('keydown',function(e){

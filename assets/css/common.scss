@@ -34,7 +34,7 @@ header,nav,section,footer{display: block;}
 .gray{background-color: $gray;}
 
 .fade{
-    @include transition(all 0.7s);
+    @include transition(all 0.5s);
     opacity: 0;
     &.up{@include transform(translateY(40px));}
     &.down{@include transform(translateY(-40px));}
@@ -45,7 +45,7 @@ header,nav,section,footer{display: block;}
 .fade.on{
     opacity: 1;
     &.up,&.down{@include transform(translateY(0));}
-    &.left,&.right{@include transform(translateX(0));@include transition(all 2s);}
+    &.left,&.right{@include transform(translateX(0));}
 }
 
 body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-size: 16px;line-height: 1.5;word-break: keep-all;letter-spacing: 0.03;}
@@ -250,6 +250,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 //Laptop
 @media screen and (max-width:1440px){
     .header_wrap{
+        height:vw1440(80);
         &::before{height: vw1440(15);max-height:17px}
     }
     .header{

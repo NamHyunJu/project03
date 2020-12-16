@@ -104,9 +104,9 @@ header, nav, section, footer {
   background-color: #F3F3F3; }
 
 .fade {
-  -webkit-transition: all 0.7s;
-  -moz-transition: all 0.7s;
-  -o-transition: all 0.7s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
   opacity: 0; }
   .fade.up {
     -webkit-transform: translateY(40px);
@@ -146,10 +146,7 @@ header, nav, section, footer {
     -moz-transform: translateX(0);
     -o-animation: translateX(0);
     -ms-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transition: all 2s;
-    -moz-transition: all 2s;
-    -o-transition: all 2s; }
+    transform: translateX(0); }
 
 body {
   font-family: jalnan,NtSansKR,serif;
@@ -594,9 +591,11 @@ body {
       right: -6px; }
 
 @media screen and (max-width: 1440px) {
-  .header_wrap::before {
-    height: 1.0416666667vw;
-    max-height: 17px; }
+  .header_wrap {
+    height: 5.5555555556vw; }
+    .header_wrap::before {
+      height: 1.0416666667vw;
+      max-height: 17px; }
 
   .header .logo {
     left: 1.0416666667vw;

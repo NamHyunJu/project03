@@ -8,6 +8,8 @@
   height: 14px;
   width: 14px;
   margin: 0;
+  left: 0;
+  top: 0;
   border: 2px solid #E60417;
   background: transparent; }
 
@@ -55,12 +57,11 @@
   text-align: center; }
 
 #cnt1 .swiper-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: 100vh; }
-  body.pc #cnt1 .swiper-container .swiper-wrapper .swiper-slide .p_img {
-    display: block; }
-  body.pc #cnt1 .swiper-container .swiper-wrapper .swiper-slide .m_img {
-    display: none; }
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide img {
     position: absolute;
     display: inline-block;
@@ -137,12 +138,12 @@
     margin-top: 0; }
   #cnt1 .controller .swiper-button-prev {
     background-image: url("../images/icon/prev.svg"); }
-    #cnt1 .controller .swiper-button-prev.on, #cnt1 .controller .swiper-button-prev:focus {
+    #cnt1 .controller .swiper-button-prev:hover, #cnt1 .controller .swiper-button-prev.on, #cnt1 .controller .swiper-button-prev:focus {
       background-image: url("../images/icon/prev_on.svg"); }
   #cnt1 .controller .swiper-button-next {
     background-image: url("../images/icon/next.svg");
     margin-left: 20px; }
-    #cnt1 .controller .swiper-button-next.on, #cnt1 .controller .swiper-button-next:focus {
+    #cnt1 .controller .swiper-button-next:hover, #cnt1 .controller .swiper-button-next.on, #cnt1 .controller .swiper-button-next:focus {
       background-image: url("../images/icon/next_on.svg"); }
   #cnt1 .controller .swiper-button-prev::after, #cnt1 .controller .swiper-button-next::after {
     content: ""; }
@@ -251,6 +252,9 @@
     position: absolute;
     background: no-repeat; }
   #cnt3 .txt {
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
     position: absolute;
     line-height: 1.5; }
     #cnt3 .txt strong {
@@ -711,9 +715,10 @@
       line-height: 1.5; }
   #cnt5 a {
     font-size: 1.5972222222vw;
-    margin: 2.0833333333vw 3.8194444444vw 0 0; }
+    margin: 2.0833333333vw 3.8194444444vw 0 0;
+    padding-right: 3%; }
     #cnt5 a::after {
-      right: -0.9722222222vw;
+      right: 0;
       width: 2.5vw;
       height: 2.5vw; }
 
@@ -734,10 +739,6 @@
   .tit + p {
     font-size: 4.3689320388vw; }
 
-  body.mobile #cnt1 .swiper-container .swiper-wrapper .swiper-slide .p_img {
-    display: none; }
-  body.mobile #cnt1 .swiper-container .swiper-wrapper .swiper-slide .m_img {
-    display: block; }
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide img {
     width: 114.3203883495vw;
     height: 148.3009708738vw; }

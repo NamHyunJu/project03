@@ -1,4 +1,10 @@
 $(document).ready(function(){
+  $('#cnt1 .swiper-container').attr({tabIndex:0});
+  
+  $('#cnt1 .swiper-container').on('foucs',function(){
+    $(this).css({border:'5px solide #000'});
+  });
+
     //본문1 swiper
     var swiper1 = new Swiper('#cnt1 .swiper-container', {
         pagination: {
@@ -33,6 +39,14 @@ $(document).ready(function(){
         swiper1.autoplay.start();
         return false;
     });
+
+    if($('body').hasClass('pc')){
+      $('#cnt1 .p_img').css('opacity',100);
+      $('#cnt1 .m_img').css('opacity',0);
+    } else{
+      $('#cnt1 .p_img').css('opacity',0);
+      $('#cnt1 .m_img').css('opacity',100);
+    }
 
     //본문2 swiper
     if($(window).width()>1023){

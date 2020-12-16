@@ -10,6 +10,8 @@
     height: 14px;
     width: 14px;
     margin: 0;
+    left: 0;
+    top: 0;
     border: 2px solid $red;
     background: transparent;
 }
@@ -38,13 +40,9 @@
 .tit{font-size: 35px;text-align: center;padding: 125px 0 20px;}
 .tit+p{font-family: NtSansKR;font-size: 18px;font-weight: 500;text-align: center;}
 #cnt1{
-    .swiper-container{width: 100%;height: 100vh;
+    .swiper-container{@include boxsizing;width: 100%;height: 100vh;
         .swiper-wrapper{
             .swiper-slide{
-                @at-root body.pc &{
-                    .p_img{display: block;}
-                    .m_img{display: none;}
-                }
                 img{position: absolute;display: inline-block;top:0;right: 0;width:1164px;height: 924px;}
                 .txt{
                     position: absolute;top: 347px;left: 255px;
@@ -90,11 +88,11 @@
         }
         .swiper-button-prev{
             background-image: url("../images/icon/prev.svg");
-            &.on,&:focus{background-image: url("../images/icon/prev_on.svg");}
+            &:hover,&.on,&:focus{background-image: url("../images/icon/prev_on.svg");}
         }
         .swiper-button-next{
             background-image: url("../images/icon/next.svg");margin-left: 20px;
-            &.on,&:focus{background-image: url("../images/icon/next_on.svg");}
+            &:hover,&.on,&:focus{background-image: url("../images/icon/next_on.svg");}
         }
         .swiper-button-prev::after,.swiper-button-next::after{content: "";}
         .play{
@@ -152,6 +150,7 @@
         position: absolute;background: no-repeat;
     }
     .txt{
+        @include transition(all 2s);
         position: absolute;line-height: 1.5;
         strong{display: inline-block;font-size: 50px;}
         p{font-size: 25px;margin-top: 64px;}
@@ -407,8 +406,8 @@
             }
         }
         a{
-            font-size: vw1440(23);margin: vw1440(30) vw1440(55) 0 0;
-            &::after{right: vw1440(-14);width: vw1440(36);height: vw1440(36);}
+            font-size: vw1440(23);margin: vw1440(30) vw1440(55) 0 0;padding-right: 3%;
+            &::after{right: 0;width: vw1440(36);height: vw1440(36);}
         }
     }
     #cnt6{
@@ -424,17 +423,13 @@
     
 }
 
-//Mobile&tablet
+//Mobile
 @media screen and (max-width:1023px){
     .tit{font-size: vw412(30);padding-top: vw412(150);}
     .tit+p{font-size: vw412(18);}
     #cnt1{
         .swiper-container .swiper-wrapper{
             .swiper-slide{
-                @at-root body.mobile &{
-                    .p_img{display: none;}
-                    .m_img{display: block;}
-                }
                 img{width:vw412(471);height: vw412(611);}
                 &:nth-child(1) strong,&:nth-child(2) p:nth-child(1),span{font-size: vw412(30);}
                 strong,&:nth-child(2) p:nth-child(1){margin-bottom: 30px;}
