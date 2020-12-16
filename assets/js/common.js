@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     $('#cnt1').attr({tabIndex:0});
 
-    /*fade
+    fade
     $(window).on('scroll',function(){
         clearTimeout(timer);
         timer=setTimeout(function(){
@@ -20,7 +20,7 @@ $(document).ready(function(){
             });
         },50);
     });
-    $(window).trigger('scroll');*/
+    $(window).trigger('scroll');
 
     
     //pcGnb

@@ -126,7 +126,8 @@ body {
   letter-spacing: 0.03; }
 
 #wrap {
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 #skip a {
   position: absolute;
@@ -784,17 +785,6 @@ body {
     -moz-border-radius: 7.2815533981vw;
     border-radius: 7.2815533981vw; }
 
-  /* //header
-  .header_wrap{height: vw412(50);}
-  .header{
-      .logo{
-          left: 0;width: vw412(123);height: vw412(14);
-      }
-      .teacher{right: vw412(90);width: vw412(109);height: vw412(30);font-size: vw412(12);}
-      .inquiry{
-          bottom: vw412(70);right: vw412(23);width: vw412(45);height: vw412(45);font-size: vw412(13);
-      }
-  } */
   #pcHeader_wrap {
     display: none; }
 
@@ -810,6 +800,8 @@ body {
     left: 0;
     width: 29.854368932vw;
     height: 3.3980582524vw; }
+    .header .logo a {
+      display: inline-block; }
   .header .teacher {
     right: 21.8446601942vw;
     width: 26.4563106796vw;
