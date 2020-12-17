@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face{font-family: jalnan;font-weight: 400;font-style: normal;
+src: url("../fonts/Jalnan.eot");
+src: url("../fonts/Jalnan.eot#iefix") format("embedded-ofentype"),
+url("../fonts/Jalnan.woff2" ) format("woff2"),
+url("../fonts/Jalnan.woff" ) format("woff"),
+url("../fonts/Jalnan.ttf" ) format("truetype");
+}
+@font-face{font-family: NtSansKR;font-weight: 400;font-style: normal;
+    src: url("../fonts/NotoSansKR-Regular.eot");
+    src: url("../fonts/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"),
+    url("../fonts/NotoSansKR-Regular.woff2" ) format("woff2"),
+    url("../fonts/NotoSansKR-Regular.woff" ) format("woff"),
+    url("../fonts/NotoSansKR-Regular.otf" ) format("opentype");
+}
+@font-face{font-family: NtSansKR;font-weight: 500;font-style: normal;
+        src: url("../fonts/NotoSansKR-Medium.eot");
+        src: url("../fonts/NotoSansKR-Medium.eot#iefix") format("embedded-opentype"),
+        url("../fonts/NotoSansKR-Medium.woff2" ) format("woff2"),
+        url("../fonts/NotoSansKR-Medium.woff" ) format("woff"),
+        url("../fonts/NotoSansKR-Medium.otf" ) format("opentype");
+}
