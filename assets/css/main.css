@@ -749,7 +749,8 @@
   #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt {
     top: 27.6179516686vh;
     left: 4.1262135922vw;
-    background: rgba(255, 255, 255, 0.4); }
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px; }
     #cnt1 .swiper-container .swiper-wrapper .swiper-slide .txt p {
       font-size: 3.8834951456vw; }
   #cnt1 .swiper-container .swiper-wrapper .slide2 p:nth-child(3), #cnt1 .swiper-container .swiper-wrapper .slide3 p:nth-child(2) {
@@ -772,15 +773,15 @@
       #cnt1 .controller .swiper-pagination .swiper-pagination-current {
         font-size: 4.854368932vw; }
     #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next, #cnt1 .controller .play_stop {
-      width: 7.7669902913vw;
-      height: 7.7669902913vw;
+      width: 8.0097087379vw;
+      height: 8.0097087379vw;
       margin-top: 0; }
     #cnt1 .controller .swiper-button-next {
       margin-left: 15px; }
     #cnt1 .controller .play {
-      margin-left: 20px; }
+      margin-left: 4.854368932vw; }
     #cnt1 .controller .stop {
-      margin-left: 30px; }
+      margin-left: 2.9126213592vw; }
 
   #cnt2 .swiper-container {
     margin-top: 55px;

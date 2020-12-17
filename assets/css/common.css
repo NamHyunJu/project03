@@ -616,32 +616,34 @@ body {
   #pcHeader {
     height: 5.5555555556vw; }
 
-  #pcGnb > ul {
-    width: 48.6111111111vw;
-    padding-top: 2.0833333333vw; }
-    #pcGnb > ul > li + li {
-      margin-left: 6.1111111111vw; }
-    #pcGnb > ul > li > a {
-      font-size: 1.25vw;
-      height: 3.4722222222vw;
-      line-height: 1.277; }
-  #pcGnb .dep2 {
-    top: 5.5555555556vw; }
-    #pcGnb .dep2 > li {
-      margin-top: 2.4305555556vw;
-      padding-bottom: 1.3888888889vw; }
-      #pcGnb .dep2 > li + li {
-        margin-left: 6.5972222222vw; }
-  #pcGnb > ul > li:nth-child(3).on .dep2::before, #pcGnb > ul > li:nth-child(4).on .dep2::before {
-    top: 10.7638888889vw;
-    padding-top: 5.2083333333vw; }
-  #pcGnb .dep3 {
-    width: calc(100% + vw1440(20));
-    padding-top: 1.3888888889vw; }
-    #pcGnb .dep3 > li a {
-      margin-top: 1.0416666667vw; }
-  #pcGnb > ul > li:nth-child(4) .dep3 {
-    padding-bottom: 2.7777777778vw; }
+  #pcGnb {
+    height: 5.5555555556vw; }
+    #pcGnb > ul {
+      width: 48.6111111111vw;
+      padding-top: 2.0833333333vw; }
+      #pcGnb > ul > li + li {
+        margin-left: 6.1111111111vw; }
+      #pcGnb > ul > li > a {
+        font-size: 1.25vw;
+        height: 3.4722222222vw;
+        line-height: 1.277; }
+    #pcGnb .dep2 {
+      top: 5.5555555556vw; }
+      #pcGnb .dep2 > li {
+        margin-top: 2.4305555556vw;
+        padding-bottom: 1.3888888889vw; }
+        #pcGnb .dep2 > li + li {
+          margin-left: 6.5972222222vw; }
+    #pcGnb > ul > li:nth-child(3).on .dep2::before, #pcGnb > ul > li:nth-child(4).on .dep2::before {
+      top: 10.7638888889vw;
+      padding-top: 5.2083333333vw; }
+    #pcGnb .dep3 {
+      width: calc(100% + vw1440(20));
+      padding-top: 1.3888888889vw; }
+      #pcGnb .dep3 > li a {
+        margin-top: 1.0416666667vw; }
+    #pcGnb > ul > li:nth-child(4) .dep3 {
+      padding-bottom: 2.7777777778vw; }
 
   #cnt6 .footer {
     height: 31.9444444444vw;
@@ -886,7 +888,7 @@ body {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      padding-top: 55.8252427184vw; }
+      padding-top: 23.0149597238vh; }
       #mGnb > ul li {
         width: 59.7087378641vw;
         margin: 0 auto; }

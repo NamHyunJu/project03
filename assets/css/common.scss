@@ -260,6 +260,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
     }
     #pcHeader{height: vw1440(80);}
     #pcGnb{
+        height:vw1440(80);
         >ul{
             width: vw1440(700);padding-top: vw1440(30);
             >li{
@@ -426,7 +427,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
         a{display: block;}
         >ul{
             @include boxsizing;
-            padding-top: vw412(230);
+            padding-top: vh869(200);
             li{width: vw412(246);margin: 0 auto;}
         }
         >ul>li{
