@@ -943,7 +943,8 @@
       line-height: 1.428; }
   #cnt5 a {
     font-size: 3.3980582524vw;
-    margin: 5.3398058252vw 5.3398058252vw 0 0; }
+    margin: 5.3398058252vw 5.3398058252vw 0 0;
+    padding-right: 0; }
     #cnt5 a::after {
       right: -5.3398058252vw;
       width: 4.1262135922vw;
