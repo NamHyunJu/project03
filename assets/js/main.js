@@ -29,14 +29,14 @@ $(document).ready(function(){
     });
     //일시정지 클릭
     $('#cnt1 .controller .stop').on('click', function () {
-        $(this).css('opacity',0).attr({tabIndex:-1}).siblings().css('opacity',1).attr({tabIndex:0}).focus();
+        $(this).css('opacity',0).attr({tabIndex:-1,'aria-hidden':true}).siblings().css('opacity',1).attr({tabIndex:0,'aria-hidden':false}).focus();
         swiper1.autoplay.stop();
         return false;
     });
     //자동실행 클릭
-    $('#cnt1 .controller .play').attr({tabIndex:-1});
+    $('#cnt1 .controller .play').attr({tabIndex:-1,'aria-hidden':true});
     $('#cnt1 .controller .play').on('click', function () {
-        $(this).css('opacity',0).attr({tabIndex:-1}).siblings().css('opacity',1).attr({tabIndex:0}).focus();
+        $(this).css('opacity',0).attr({tabIndex:-1,'aria-hidden':true}).siblings().css('opacity',1).attr({tabIndex:0,'aria-hidden':false}).focus();
         swiper1.autoplay.start();
         return false;
     });
