@@ -186,7 +186,7 @@ body{font-family: jalnan,NtSansKR,serif;font-weight: 400;color: #222222;font-siz
 }
 
 #dim,#modalCnt{position: fixed;z-index: 950;}
-#dim{display:none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8);}
+#dim{display:none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8);overflow-y: auto;}
 #modalCnt{
     @include radius(80px);
     @include boxsizing;

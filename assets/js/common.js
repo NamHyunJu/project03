@@ -179,6 +179,50 @@ $(document).ready(function(){
         $(window).on('keydown',function(e){
             if(e.keyCode===27) _mdClose.trigger('click');
         });
+
+
+     });
+     //form 유효성체크
+     $('#apply').on('submit',function(){
+        var _name=$('#name');
+        var _age=$('[name="age"]');
+        var _tel2=$('#midNum');
+        var _tel3=$('#lastNum');
+        var _where=$('[name="where"]');
+        var _content=$('#content');
+        var _agree=$('#agree');
+
+        if(regChk(_name,/^[가-힣]{2,10}$/,'자녀이름은 한글만 2~10로 작성해주세요')===false) return false;
+        if(radioChk(_age,'연령은 필수 입력사항 입니다.')===false) return false;
+        if(regChk(_tel2,/^[0-9]{3,4}$/,'휴대폰 가운데 자리를 입력해주세요')===false) return false;
+        if(regChk(_tel3,/^[0-9]{4}$/,'휴대폰 마지막 자리를 입력해주세요')===false) return false;
+        if(radioChk(_where,'학습형태는 필수 입력사항 입니다.')===false) return false;
+        if(regChk(_content,/.{10,200}/,'상담내용은 10~200자 까지 입력해 주세요.')===false) return false;
+        if(_agree.is(':checked')===false){
+            alert('개인정보 수집·이용 및 제공 동의에 동의하지 않았습니다.');
+            _agree.focus();
+        }
+        function regChk(_tg,regExp,msg){
+            var result=regExp.test(_tg.val());
+            if(result){
+                return true;
+            }else{
+                alert(msg);
+                _tg.focus();
+                return false;
+            }
+        }
+        function radioChk(_tg,msg){
+            var radioVal;
+            _tg.each(function(){
+                if($(this).is(':checked')) radioVal=$(this).val();
+            });
+            if(radioVal) return true;
+            else{
+                alert(msg);
+                return false;
+            }
+        }
      });
 
      //스크롤바가 제일 하단이면 문의하기 버튼 이동
